@@ -1,0 +1,11 @@
+#name {
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+#liu {
+  position: absolute; }
+
+/*# sourceMappingURL=index.css.map */
