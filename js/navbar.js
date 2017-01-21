@@ -1,23 +1,31 @@
 $(function() {
-    var minLiuLeft = parseFloat($(".navbar > .container-fluid").css('padding-left')) + $("#logo > .mi").width();
-    var maxLiuLeft = minLiuLeft + $("#logo > .chael").width() + 6.18;
-    $("#logo > .liu").css('left', maxLiuLeft);
-
+    var maxLiuLeft = $("#logo > .chael").width() + 6.18;
+    $("#logo > .liu").css({
+        'left': maxLiuLeft
+    });
+    var liuLeft;
     $(window).scroll(function(){
-        var liuLeft = maxLiuLeft - $(window).scrollTop()/4;
-        if (liuLeft > minLiuLeft) {
+
+        liuLeft = maxLiuLeft + 0 - $(window).scrollTop()/4; // relate scroll distance to "mi liu" distance
+        if (liuLeft >= maxLiuLeft) {
+            $("#logo").css('cursor', 'default')
+            $("#logo > .liu").css('left', maxLiuLeft);
+            $("#logo > .chael").css('opacity', 1);
+        } else if (liuLeft >= 0) {
+            $("#logo").css('cursor', 'default')
             $("#logo > .liu").css('left', liuLeft);
-            $("#logo > .chael").css('opacity', (liuLeft - minLiuLeft)/(maxLiuLeft - minLiuLeft));
+            $("#logo > .chael").css('opacity', liuLeft/maxLiuLeft);
         } else {
-            $("#logo > .liu").css('left', minLiuLeft);
+            $("#logo").css('cursor', 'pointer');
+            $("#logo > .liu").css('left', 0);
             $("#logo > .chael").css('opacity', 0);
         }
-    })
-
-    $(window).mousemove(function(){
-        $("#logo").css('visibility', 'visible');
-        $("#logo").animate({
-            opacity: 1
-        }, 500);
+    });
+    $("#logo").click(function() {
+        if (liuLeft <= 0) {
+            $("body").animate({
+                scrollTop: 0
+            }, 500);
+        }
     });
 });
