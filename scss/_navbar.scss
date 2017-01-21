@@ -1,0 +1,9 @@
+@import 'styles';
+
+#logo {
+    font: $title;
+    color: $gray;
+    padding: 5.5px 0px;
+    opacity: 0;
+    visibility: hidden;
+}
