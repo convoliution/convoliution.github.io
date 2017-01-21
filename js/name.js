@@ -1,20 +1,22 @@
-$(function() {
-    $("#liu").css('left', $("#mi").css('width'));
-    $("#liu").css('top', $("#mi").css('height'));
+$(window).on('load', function() {
+    $("#cover").fadeOut(1000);
+});
 
-    $("#name").hover(function(){
+$(function() {
+
+
+    $("#liu").css({
+        'left': $("#mi").width(),
+        'top': $("#mi").width()
+    });
+    $(window).mousemove(function(){
         $("#liu").animate({
             top: 0
         }, 400);
         $("#chael").animate({
             opacity: 0
-        }, 400);
-    }, function(){
-        $("#liu").animate({
-            top: $("#mi").css('height')
-        }, 400);
-        $("#chael").animate({
-            opacity: 1
-        }, 400);
+        }, 400, function() {
+            $(this).css('display', 'none');
+        });
     });
 });
