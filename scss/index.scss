@@ -1,7 +1,10 @@
 @import 'name';
 @import 'navbar';
 
-body { padding-top: 50px; }
+body {
+    height: 2000px;
+    padding-top: 50px;
+}
 
 #cover {
     position: fixed;

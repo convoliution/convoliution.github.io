@@ -2,7 +2,7 @@
   font: 24pt "Lato", sans-serif;
   color: #8d8d8d;
   display: inline-block;
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(0, -100%);
@@ -16,8 +16,11 @@
   padding: 5.5px 0px;
   opacity: 0;
   visibility: hidden; }
+  #logo .liu {
+    position: absolute; }
 
 body {
+  height: 2000px;
   padding-top: 50px; }
 
 #cover {
