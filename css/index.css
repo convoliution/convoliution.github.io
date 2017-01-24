@@ -19,6 +19,13 @@
   #logo .liu {
     position: relative; }
 
+/* One of the few things IE does right */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
 body {
   height: 2000px;
   padding-top: 50px; }
