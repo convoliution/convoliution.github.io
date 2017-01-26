@@ -1,5 +1,5 @@
 $(function() {
-    var maxLiuLeft = $("#logo > .chael").width() + 10;
+    var maxLiuLeft = $("#logo > .chael").width() + 8;
     $("#logo > .liu").css({
         'left': maxLiuLeft
     });
