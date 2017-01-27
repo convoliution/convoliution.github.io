@@ -29,7 +29,7 @@
 }
 .phase::before {
     left: 2px;
-    text-shadow: -2px 0 $light-gray;
+    text-shadow: -1px 0 red;
     background: white;
     -webkit-animation: phase-before 3s infinite linear alternate-reverse;
    -moz-animation: phase-before 3s infinite linear alternate-reverse;
@@ -37,8 +37,8 @@
     animation: phase-before 3s infinite linear alternate-reverse;
 }
 .phase::after {
-    left: 2px;
-    text-shadow: -2px 0 $light-gray;
+    left: -2px;
+    text-shadow: 1px 0 blue;
     background: white;
     -webkit-animation: phase-after 3s infinite linear alternate-reverse;
    -moz-animation: phase-after 3s infinite linear alternate-reverse;
