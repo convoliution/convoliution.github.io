@@ -1,24 +1,3 @@
-#landing {
-  font: 24pt "Lato", sans-serif;
-  color: #8d8d8d;
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  cursor: default; }
-  #landing .liu {
-    position: absolute; }
-
-#logo {
-  font: 36pt "Lato", sans-serif;
-  color: #8d8d8d;
-  display: inline-block;
-  padding: 5.5px 0px;
-  cursor: default; }
-  #logo #chael {
-    position: fixed; }
-  #logo #liu {
-    position: relative; }
-
 /* One of the few things IE does right */
 html {
   box-sizing: border-box; }
@@ -38,5 +17,23 @@ body {
   left: 0;
   background: #FFFFFF;
   z-index: 9999; }
+
+#landing {
+  font: 2em "Lato", sans-serif;
+  color: #8d8d8d;
+  display: inline-block;
+  position: absolute;
+  cursor: default; }
+
+#logo {
+  font: 48px "Lato", sans-serif;
+  color: #8d8d8d;
+  display: inline-block;
+  padding: 5.5px 0px;
+  cursor: default; }
+  #logo #chael {
+    position: fixed; }
+  #logo #liu {
+    position: relative; }
 
 /*# sourceMappingURL=index.css.map */

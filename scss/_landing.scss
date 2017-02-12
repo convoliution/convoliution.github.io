@@ -1,10 +1,9 @@
 @import 'styles';
 
 #landing {
-    font: $title;
+    font: $h1;
     color: $gray;
     display: inline-block;
     position: absolute;
-    top: 50%;
     cursor: default;
 }
