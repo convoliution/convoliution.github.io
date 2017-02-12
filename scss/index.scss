@@ -1,6 +1,3 @@
-@import 'landing';
-@import 'navbar';
-
 /* One of the few things IE does right */
 html {
   box-sizing: border-box;
@@ -23,3 +20,6 @@ body {
     background: #FFFFFF;
     z-index: 9999;
 }
+
+@import 'landing';
+@import 'navbar';
