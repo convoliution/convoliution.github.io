@@ -7,6 +7,10 @@
     padding: 5.5px 0px;
     cursor: default;
 
+    > * {
+        opacity: 0; // hide logo during initial positioning while page loads
+    }
+
     #chael {
         position: fixed;
     }

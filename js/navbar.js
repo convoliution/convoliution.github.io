@@ -4,8 +4,7 @@ $(function() {
         'left': maxLiuLeft
     });
     var liuLeft;
-    $(window).scroll(function(){
-
+    function updateLiu() {
         liuLeft = maxLiuLeft + 0 - $(window).scrollTop()/4; // relate scroll distance to "mi liu" distance
         if (liuLeft >= maxLiuLeft) {
             $("#logo").css('cursor', 'default')
@@ -23,7 +22,16 @@ $(function() {
             $("#logo > #chael").css('opacity', 0);
             $("#logo > #chael").css('display', 'none');
         }
+    }
+
+    updateLiu(); // set Liu on document ready
+    $("#logo > #mi").css('opacity', 1);
+    $("#logo > #liu").css('opacity', 1);
+
+    $(window).scroll(function(){
+        updateLiu();
     });
+
     $("#logo").click(function() {
         if (liuLeft <= 0) {
             $("body").animate({

@@ -8,16 +8,7 @@ html {
 
 body {
     padding-top: 68px;
-}
-
-#cover {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: #FFFFFF;
-    z-index: 9999;
+    height: 2000px;
 }
 
 @import 'landing';

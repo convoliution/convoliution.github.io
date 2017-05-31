@@ -6,16 +6,8 @@ html {
   box-sizing: inherit; }
 
 body {
-  padding-top: 68px; }
-
-#cover {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: #FFFFFF;
-  z-index: 9999; }
+  padding-top: 68px;
+  height: 2000px; }
 
 #landing {
   font: 2em "Lato", sans-serif;
@@ -30,6 +22,8 @@ body {
   display: inline-block;
   padding: 5.5px 0px;
   cursor: default; }
+  #logo > * {
+    opacity: 0; }
   #logo #chael {
     position: fixed; }
   #logo #liu {
