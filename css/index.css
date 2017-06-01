@@ -25,6 +25,7 @@ body {
   -webkit-touch-callout: none;
   /* iOS Safari */
   -webkit-tap-highlight-color: transparent;
+  /* WebKit */
   -webkit-tap-highlight-color: transparent;
   /* Android Chrome */
   -webkit-user-select: none;
