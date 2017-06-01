@@ -1,8 +1,6 @@
 $(function() {
     var maxLiuLeft = $("#logo > #chael").width() + 8;
-    $("#logo > #liu").css({
-        'left': maxLiuLeft
-    });
+    $("#logo > #liu").css('left', maxLiuLeft);
     var liuLeft;
     function updateLiu() {
         liuLeft = maxLiuLeft + 0 - $(window).scrollTop()/4; // relate scroll distance to "mi liu" distance
