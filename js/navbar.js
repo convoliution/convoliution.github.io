@@ -1,30 +1,30 @@
 $(function() {
-    var maxLiuLeft = $("#logo > #chael").width() + 8;
-    $("#logo > #liu").css('left', maxLiuLeft);
+    var maxLiuLeft = $("#chael").width() + 8;
+    $("#liu").css('left', maxLiuLeft);
     var liuLeft;
     function updateLiu() {
         liuLeft = maxLiuLeft + 0 - $(window).scrollTop()/4; // relate scroll distance to "mi liu" distance
         if (liuLeft >= maxLiuLeft) {
             $("#logo").css('cursor', 'default')
-            $("#logo > #liu").css('left', maxLiuLeft);
-            $("#logo > #chael").css('opacity', 1);
-            $("#logo > #chael").css('display', 'inline-block');
+            $("#liu").css('left', maxLiuLeft);
+            $("#chael").css('opacity', 1);
+            $("#chael").css('display', 'inline-block');
         } else if (liuLeft >= 0) {
             $("#logo").css('cursor', 'default')
-            $("#logo > #liu").css('left', liuLeft);
-            $("#logo > #chael").css('opacity', liuLeft/maxLiuLeft);
-            $("#logo > #chael").css('display', 'inline-block');
+            $("#liu").css('left', liuLeft);
+            $("#chael").css('opacity', liuLeft/maxLiuLeft);
+            $("#chael").css('display', 'inline-block');
         } else {
             $("#logo").css('cursor', 'pointer');
-            $("#logo > #liu").css('left', 0);
-            $("#logo > #chael").css('opacity', 0);
-            $("#logo > #chael").css('display', 'none');
+            $("#liu").css('left', 0);
+            $("#chael").css('opacity', 0);
+            $("#chael").css('display', 'none');
         }
     }
 
     updateLiu(); // set Liu on document ready
-    $("#logo > #mi").css('opacity', 1);
-    $("#logo > #liu").css('opacity', 1);
+    $("#mi").css('opacity', 1);
+    $("#liu").css('opacity', 1);
 
     $(window).scroll(function(){
         updateLiu();
