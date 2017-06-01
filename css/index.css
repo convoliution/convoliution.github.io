@@ -29,9 +29,9 @@ body {
   user-select: none; }
   #logo > * {
     opacity: 0; }
-  #logo #chael {
+  #logo > #chael {
     position: fixed; }
-  #logo #liu {
+  #logo > #liu {
     position: relative; }
 
 /*# sourceMappingURL=index.css.map */
