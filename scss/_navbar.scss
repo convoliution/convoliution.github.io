@@ -5,14 +5,14 @@
     width: 100%;
     z-index: 1;
     background-color: $light-gray;
-    border-bottom: 1px solid $gray;
+    border-bottom: .05em solid $gray;
 }
 
 #logo {
     font: $logo;
     color: $gray;
     display: inline-block;
-    padding: 5px 10px;
+    padding: .2em .3em;
 
     -webkit-touch-callout: none; // iOS Safari
     -webkit-tap-highlight-color: rgba(0,0,0,0); // WebKit
@@ -28,6 +28,7 @@
 
     > #chael {
         position: fixed;
+        padding-right: .2em;
     }
 
     > #liu {

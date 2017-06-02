@@ -1,5 +1,5 @@
 $(function() {
-    var maxLiuLeft = $("#chael").width() + 8;
+    var maxLiuLeft = $("#chael").outerWidth();
     $("#liu").css('left', maxLiuLeft);
     var liuLeft;
     function updateLiu() {
