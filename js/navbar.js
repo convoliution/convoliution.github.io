@@ -22,7 +22,7 @@ $(function() {
         }
     }
 
-    updateLiu(); // set Liu on document ready
+    updateLiu(); // set Liu position on document ready
     $("#mi").css('opacity', 1);
     $("#liu").css('opacity', 1);
 

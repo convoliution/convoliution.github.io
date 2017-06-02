@@ -1,11 +1,18 @@
 @import 'styles';
 
+#navbar {
+    position: fixed; // independent of scrolling
+    width: 100%;
+    z-index: 1;
+    background-color: $light-gray;
+    border-bottom: 1px solid $gray;
+}
+
 #logo {
     font: $logo;
     color: $gray;
     display: inline-block;
-    padding: 5.5px 0px;
-    cursor: default;
+    padding: 5px 10px;
 
     -webkit-touch-callout: none; // iOS Safari
     -webkit-tap-highlight-color: rgba(0,0,0,0); // WebKit

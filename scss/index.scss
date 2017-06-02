@@ -6,9 +6,12 @@ html {
   box-sizing: inherit;
 }
 
-// make room for navbar
+p {
+    margin: 0; // why would it have a default margin, anyway?
+}
+
 body {
-    padding-top: 68px;
+    height: 6000px; // to test scrolling
 }
 
 @import 'landing';
