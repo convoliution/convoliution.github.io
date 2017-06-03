@@ -46,4 +46,18 @@ body {
   #logo > #liu {
     position: relative; }
 
+#menu {
+  position: absolute;
+  margin: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%); }
+  #menu > li {
+    list-style-type: none;
+    display: inline-block; }
+    #menu > li > a {
+      text-decoration: none;
+      font: 2em "Lato", sans-serif;
+      color: #8d8d8d; }
+
 /*# sourceMappingURL=index.css.map */

@@ -35,3 +35,22 @@
         position: relative;
     }
 }
+
+#menu {
+    position: absolute;
+    margin: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    > li {
+        list-style-type: none;
+        display: inline-block;
+
+        > a {
+            text-decoration: none;
+            font: $h1;
+            color: $gray;
+        }
+    }
+}
