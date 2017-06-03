@@ -38,14 +38,17 @@
 
 #menu {
     position: absolute;
+    padding-right: 0;
+    padding-right: .9em; // equivalent to #logo's padding-left of .3em
     margin: 0;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
 
     > li {
-        list-style-type: none;
         display: inline-block;
+        list-style-type: none;
+        margin-left: 1em;
 
         > a {
             text-decoration: none;
