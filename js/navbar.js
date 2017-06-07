@@ -32,7 +32,7 @@ $(function() {
 
     $("#logo").click(function() {
         if (liuLeft <= 0) {
-            $("body").animate({
+            $("html, body").animate({
                 scrollTop: 0
             }, 500);
         }
