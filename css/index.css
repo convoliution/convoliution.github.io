@@ -7,6 +7,9 @@ html {
 p {
   margin: 0; }
 
+a {
+  text-decoration: none; }
+
 .section {
   width: 100%; }
 
@@ -45,5 +48,21 @@ body {
     padding-right: .2em; }
   #logo > #liu {
     position: relative; }
+
+#menu {
+  position: absolute;
+  padding-right: 0;
+  padding-right: .9em;
+  margin: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%); }
+  #menu > li {
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 1em; }
+    #menu > li > a {
+      font: 2em "Lato", sans-serif;
+      color: #8d8d8d; }
 
 /*# sourceMappingURL=index.css.map */
