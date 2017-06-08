@@ -7,6 +7,9 @@ html {
 p {
   margin: 0; }
 
+a {
+  text-decoration: none; }
+
 .section {
   width: 100%; }
 
@@ -59,7 +62,6 @@ body {
     list-style-type: none;
     margin-left: 1em; }
     #menu > li > a {
-      text-decoration: none;
       font: 2em "Lato", sans-serif;
       color: #8d8d8d; }
 
