@@ -18,9 +18,12 @@ a {
     width: 100%;
 }
 
-body {
-    height: 6000px; // to test scrolling
+.section {
+    height: 100vh; // to test scrolling
 }
 
-@import 'landing';
 @import 'navbar';
+@import 'landing';
+@import 'about';
+@import 'projects';
+@import 'contact';

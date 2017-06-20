@@ -3,14 +3,14 @@ $(function() {
     $('#liu').css('left', maxLiuLeft);
     var liuLeft;
     function updateLiu() {
-        liuLeft = maxLiuLeft + 0 - $(window).scrollTop()/4; // relate scroll distance to 'mi liu' distance
+        liuLeft = maxLiuLeft*(1 - $(window).scrollTop()/$('#landing').outerHeight()); // relate scroll distance to 'mi liu' distance
         if (liuLeft >= maxLiuLeft) {
             $('#logo').removeClass('nav');
             $('#logo').css('cursor', 'default')
             $('#liu').css('left', maxLiuLeft);
             $('#chael').css('opacity', 1);
             $('#chael').css('display', 'inline-block');
-        } else if (liuLeft >= 0) {
+        } else if (liuLeft >= 1) {
             $('#logo').removeClass('nav');
             $('#logo').css('cursor', 'default')
             $('#liu').css('left', liuLeft);

@@ -13,14 +13,8 @@ a {
 .section {
   width: 100%; }
 
-body {
-  height: 6000px; }
-
-#landing {
-  font: 2em "Lato", sans-serif;
-  color: #8d8d8d;
-  display: inline-block;
-  cursor: default; }
+.section {
+  height: 100vh; }
 
 #navbar {
   position: fixed;
@@ -64,5 +58,23 @@ body {
     #menu > li > a {
       font: 2em "Lato", sans-serif;
       color: #8d8d8d; }
+
+#landing {
+  font: 2em "Lato", sans-serif;
+  color: #8d8d8d;
+  display: inline-block;
+  cursor: default; }
+
+#landing {
+  background-color: #333333; }
+
+#about {
+  background-color: #666666; }
+
+#projects {
+  background-color: #999999; }
+
+#contact {
+  background-color: #CCCCCC; }
 
 /*# sourceMappingURL=index.css.map */
