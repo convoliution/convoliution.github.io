@@ -19,13 +19,7 @@ a {
   width: 100%;
   z-index: 1;
   background-color: #f8f8f8;
-  border-bottom: 0.05em solid #8d8d8d; }
-
-#logo {
-  font: 3em "Lato", sans-serif;
-  color: #8d8d8d;
-  display: inline-block;
-  padding: .1em .3em;
+  border-bottom: 0.05em solid #8d8d8d;
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight-color: transparent;
@@ -33,6 +27,12 @@ a {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
+
+#logo {
+  font: 3em "Lato", sans-serif;
+  color: #8d8d8d;
+  display: inline-block;
+  padding: .1em .3em; }
   #logo > * {
     opacity: 0; }
   #logo > #chael {
