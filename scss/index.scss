@@ -1,3 +1,7 @@
+@import 'globals';
+@import 'utils';
+@import 'breakpoints';
+
 // one of the few things IE does right
 html {
   box-sizing: border-box;
@@ -14,9 +18,18 @@ a {
     text-decoration: none; // no underline
 }
 
+#content {
+    @include breakpoint(minimum) {
+        padding-top: $navbar-height-minimum;
+    }
+    @include breakpoint(small) {
+        padding-top: $navbar-height;
+    }
+}
+
 .section {
     width: 100%;
-    height: 100vh;
+    @include calc(height, '100vh - #{$navbar-height}'); // mostly for testing purposes
 }
 
 @import 'navbar';
