@@ -1,0 +1,14 @@
+$minimum: 24em;
+$small:   40em;
+
+@mixin breakpoint($size) {
+    @if $size == minimum {
+        @media only screen and (min-width: $minimum) { @content; }
+    }
+    @else if $size == small {
+        @media only screen and (min-width: $small) { @content; }
+    }
+    @else {
+        @warn "Breakpoint mixin only supports: minimum, small.";
+    }
+}
