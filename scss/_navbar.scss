@@ -28,8 +28,15 @@
 #logo {
     font: $logo;
     color: $gray;
-    display: inline-block;
     padding: .1em .3em;
+
+    @include breakpoint(minimum) {
+        display: flex;
+        justify-content: center;
+    }
+    @include breakpoint(small) {
+        display: inline-flex;
+    }
 
     > * {
         opacity: 0; // hide logo during initial positioning while page loads
