@@ -1,8 +1,7 @@
 $(function() {
     var maxLiuLeft = $('#chael').outerWidth();
-    var liuLeft;
     function updateLiu() {
-        liuLeft = maxLiuLeft*(1 - $(window).scrollTop()/$('#landing').outerHeight()); // relate scroll distance to 'mi liu' distance
+        var liuLeft = maxLiuLeft*(1 - $(window).scrollTop()/$('#landing').outerHeight()); // relate scroll distance to 'mi liu' distance
         if (liuLeft >= maxLiuLeft) {
             $('#logo').removeClass('nav');
             $('#logo').css('cursor', 'default')
