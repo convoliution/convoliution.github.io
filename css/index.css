@@ -61,18 +61,20 @@ a {
   margin: 0; }
   @media only screen and (min-width: 24em) {
     #menu {
-      position: static; } }
+      display: flex;
+      justify-content: center; } }
   @media only screen and (min-width: 40em) {
     #menu {
       position: absolute;
-      padding-right: .9em;
       right: 0;
-      top: 50%;
-      transform: translateY(-50%); } }
+      padding-right: .9em;
+      height: 100%;
+      display: inline-flex;
+      align-items: center; } }
   #menu > li {
     display: inline-block;
     list-style-type: none;
-    margin-left: 1em; }
+    margin: 0 .5em; }
     #menu > li > a {
       font: 2em "Lato", sans-serif;
       color: #8d8d8d; }

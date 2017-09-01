@@ -49,20 +49,25 @@
     padding: 0;
     margin: 0;
     @include breakpoint(minimum) {
-        position: static;
+        display: flex;
+        justify-content: center;
     }
     @include breakpoint(small) {
         position: absolute;
-        padding-right: .9em; // equivalent to #logo's padding-left of .3em
         right: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        padding-right: .9em; // equivalent to #logo's padding-left of .3em
+        height: 100%;
+        display: inline-flex;
+        align-items: center;
+        //justify-content: flex-end;
+        //top: 50%;
+        //transform: translateY(-50%);
     }
 
     > li {
         display: inline-block;
         list-style-type: none;
-        margin-left: 1em;
+        margin: 0 .5em;
 
         > a {
             font: $h1;
