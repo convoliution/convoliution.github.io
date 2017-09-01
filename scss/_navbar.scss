@@ -28,20 +28,23 @@
 #logo {
     font: $logo;
     color: $gray;
-    display: inline-block;
     padding: .1em .3em;
 
+    @include breakpoint(minimum) {
+        display: flex;
+        justify-content: center;
+    }
+    @include breakpoint(small) {
+        display: inline-flex;
+    }
+
     > * {
+        position: relative;
         opacity: 0; // hide logo during initial positioning while page loads
     }
 
     > #chael {
-        position: static;
         padding-right: .2em;
-    }
-
-    > #liu {
-        position: relative;
     }
 }
 
@@ -59,9 +62,6 @@
         height: 100%;
         display: inline-flex;
         align-items: center;
-        //justify-content: flex-end;
-        //top: 50%;
-        //transform: translateY(-50%);
     }
 
     > li {

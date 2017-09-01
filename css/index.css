@@ -46,15 +46,19 @@ a {
 #logo {
   font: 3em "Lato", sans-serif;
   color: #8d8d8d;
-  display: inline-block;
   padding: .1em .3em; }
+  @media only screen and (min-width: 24em) {
+    #logo {
+      display: flex;
+      justify-content: center; } }
+  @media only screen and (min-width: 40em) {
+    #logo {
+      display: inline-flex; } }
   #logo > * {
+    position: relative;
     opacity: 0; }
   #logo > #chael {
-    position: static;
     padding-right: .2em; }
-  #logo > #liu {
-    position: relative; }
 
 #menu {
   padding: 0;

@@ -1,25 +1,56 @@
 $(function() {
-    var maxLiuLeft = -$('#chael').outerWidth();
     function updateLiu() {
-        var liuLeft = maxLiuLeft*$(window).scrollTop()/$('#landing').outerHeight(); // relate scroll distance to 'mi liu' distance
-        if (liuLeft >= 0) {
-            $('#logo').removeClass('nav');
-            $('#logo').css('cursor', 'default')
-            $('#liu').css('left', 0);
-            $('#chael').css('opacity', 1);
-            $('#chael').css('display', 'inline-block');
-        } else if (liuLeft > maxLiuLeft) {
-            $('#logo').removeClass('nav');
-            $('#logo').css('cursor', 'default')
-            $('#liu').css('left', liuLeft);
-            $('#chael').css('opacity', 1 - liuLeft/maxLiuLeft);
-            $('#chael').css('display', 'inline-block');
-        } else {
-            $('#logo').addClass('nav');
-            $('#logo').css('cursor', 'pointer');
-            $('#liu').css('left', 0); // back to 0 because .chael is display: none
-            $('#chael').css('opacity', 0);
-            $('#chael').css('display', 'none');
+        if ($('#logo').css('display') === 'flex') { // compact navbar
+            var minLiuLeft = -$('#chael').outerWidth()/2;
+            var maxMiLeft = $('#chael').outerWidth()/2;
+            var liuLeft = minLiuLeft*$(window).scrollTop()/$('#landing').outerHeight();
+            var miLeft = maxMiLeft*$(window).scrollTop()/$('#landing').outerHeight();
+            if (liuLeft >= 0) {
+                $('#logo').removeClass('nav');
+                $('#logo').css('cursor', 'default');
+                $('#mi').css('left', 0);
+                $('#chael').css('left', 0);
+                $('#liu').css('left', 0);
+                $('#chael').css('opacity', 1);
+                $('#chael').css('display', 'inline-block');
+            } else if (liuLeft > minLiuLeft) {
+                $('#logo').removeClass('nav');
+                $('#logo').css('cursor', 'default');
+                $('#mi').css('left', miLeft);
+                $('#chael').css('left', miLeft);
+                $('#liu').css('left', liuLeft);
+                $('#chael').css('opacity', 1 - liuLeft/minLiuLeft);
+                $('#chael').css('display', 'inline-block');
+            } else {
+                $('#logo').addClass('nav');
+                $('#logo').css('cursor', 'pointer');
+                $('#mi').css('left', 0); // back to 0 because .chael is display: none
+                $('#liu').css('left', 0); // back to 0 because .chael is display: none
+                $('#chael').css('opacity', 0);
+                $('#chael').css('display', 'none');
+            }
+        } else { // normal navbar
+            var minLiuLeft = -$('#chael').outerWidth();
+            var liuLeft = minLiuLeft*$(window).scrollTop()/$('#landing').outerHeight(); // relate scroll distance to 'mi liu' distance
+            if (liuLeft >= 0) {
+                $('#logo').removeClass('nav');
+                $('#logo').css('cursor', 'default');
+                $('#liu').css('left', 0);
+                $('#chael').css('opacity', 1);
+                $('#chael').css('display', 'inline-block');
+            } else if (liuLeft > minLiuLeft) {
+                $('#logo').removeClass('nav');
+                $('#logo').css('cursor', 'default');
+                $('#liu').css('left', liuLeft);
+                $('#chael').css('opacity', 1 - liuLeft/minLiuLeft);
+                $('#chael').css('display', 'inline-block');
+            } else {
+                $('#logo').addClass('nav');
+                $('#logo').css('cursor', 'pointer');
+                $('#liu').css('left', 0); // back to 0 because .chael is display: none
+                $('#chael').css('opacity', 0);
+                $('#chael').css('display', 'none');
+            }
         }
     }
 
