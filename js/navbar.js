@@ -38,6 +38,6 @@ $(function() {
     $('#navbar').on('click', '.nav', function(event) {
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top - $('#navbar').outerHeight()
-        }, 500);
+        }, 1000);
     });
 });
