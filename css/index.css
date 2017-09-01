@@ -51,7 +51,7 @@ a {
   #logo > * {
     opacity: 0; }
   #logo > #chael {
-    position: fixed;
+    position: static;
     padding-right: .2em; }
   #logo > #liu {
     position: relative; }
