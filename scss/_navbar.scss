@@ -39,16 +39,12 @@
     }
 
     > * {
+        position: relative;
         opacity: 0; // hide logo during initial positioning while page loads
     }
 
     > #chael {
-        position: static;
         padding-right: .2em;
-    }
-
-    > #liu {
-        position: relative;
     }
 }
 

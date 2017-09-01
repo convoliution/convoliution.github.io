@@ -9,6 +9,7 @@ $(function() {
                 $('#logo').removeClass('nav');
                 $('#logo').css('cursor', 'default');
                 $('#mi').css('left', 0);
+                $('#chael').css('left', 0);
                 $('#liu').css('left', 0);
                 $('#chael').css('opacity', 1);
                 $('#chael').css('display', 'inline-block');
@@ -16,6 +17,7 @@ $(function() {
                 $('#logo').removeClass('nav');
                 $('#logo').css('cursor', 'default');
                 $('#mi').css('left', miLeft);
+                $('#chael').css('left', miLeft);
                 $('#liu').css('left', liuLeft);
                 $('#chael').css('opacity', 1 - liuLeft/minLiuLeft);
                 $('#chael').css('display', 'inline-block');
