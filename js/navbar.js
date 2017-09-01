@@ -1,6 +1,5 @@
 $(function() {
     var maxLiuLeft = $('#chael').outerWidth();
-    $('#liu').css('left', maxLiuLeft);
     var liuLeft;
     function updateLiu() {
         liuLeft = maxLiuLeft*(1 - $(window).scrollTop()/$('#landing').outerHeight()); // relate scroll distance to 'mi liu' distance
