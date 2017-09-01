@@ -42,6 +42,10 @@
         opacity: 0; // hide logo during initial positioning while page loads
     }
 
+    > #mi {
+        position: relative;
+    }
+
     > #chael {
         position: static;
         padding-right: .2em;

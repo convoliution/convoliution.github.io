@@ -56,6 +56,8 @@ a {
       display: inline-flex; } }
   #logo > * {
     opacity: 0; }
+  #logo > #mi {
+    position: relative; }
   #logo > #chael {
     position: static;
     padding-right: .2em; }
