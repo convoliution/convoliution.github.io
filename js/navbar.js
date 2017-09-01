@@ -1,23 +1,23 @@
 $(function() {
-    var maxLiuLeft = $('#chael').outerWidth();
+    var maxLiuLeft = -$('#chael').outerWidth();
     function updateLiu() {
-        var liuLeft = maxLiuLeft*(1 - $(window).scrollTop()/$('#landing').outerHeight()); // relate scroll distance to 'mi liu' distance
-        if (liuLeft >= maxLiuLeft) {
+        var liuLeft = maxLiuLeft*$(window).scrollTop()/$('#landing').outerHeight(); // relate scroll distance to 'mi liu' distance
+        if (liuLeft >= 0) {
             $('#logo').removeClass('nav');
             $('#logo').css('cursor', 'default')
-            $('#liu').css('left', maxLiuLeft);
+            $('#liu').css('left', 0);
             $('#chael').css('opacity', 1);
             $('#chael').css('display', 'inline-block');
-        } else if (liuLeft >= 1) {
+        } else if (liuLeft > maxLiuLeft) {
             $('#logo').removeClass('nav');
             $('#logo').css('cursor', 'default')
             $('#liu').css('left', liuLeft);
-            $('#chael').css('opacity', liuLeft/maxLiuLeft);
+            $('#chael').css('opacity', 1 - liuLeft/maxLiuLeft);
             $('#chael').css('display', 'inline-block');
         } else {
             $('#logo').addClass('nav');
             $('#logo').css('cursor', 'pointer');
-            $('#liu').css('left', 0);
+            $('#liu').css('left', 0); // back to 0 because .chael is display: none
             $('#chael').css('opacity', 0);
             $('#chael').css('display', 'none');
         }
