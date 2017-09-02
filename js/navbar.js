@@ -30,6 +30,8 @@ $(function() {
                 $('#chael').css('display', 'none');
             }
         } else { // normal navbar
+            $('#mi').css('left', 0);
+            $('#chael').css('left', 0);
             var minLiuLeft = -$('#chael').outerWidth();
             var liuLeft = minLiuLeft*$(window).scrollTop()/$('#landing').outerHeight(); // relate scroll distance to 'mi liu' distance
             if (liuLeft >= 0) {
