@@ -1,6 +1,6 @@
 $(function() {
     function updateLiu() {
-        if ($('#logo').css('display') === 'flex') { // compact navbar
+        if ($('#logo').css('align-items') === 'normal') { // compact navbar
             var minLiuLeft = -$('#chael').outerWidth()/2;
             var maxMiLeft = $('#chael').outerWidth()/2;
             var liuLeft = minLiuLeft*$(window).scrollTop()/$('#landing').outerHeight();

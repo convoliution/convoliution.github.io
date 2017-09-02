@@ -20,7 +20,7 @@ a {
 
 #content {
     @include breakpoint(minimum) {
-        padding-top: $navbar-height-minimum;
+        padding-top: $navbar-height-compact;
     }
     @include breakpoint(small) {
         padding-top: $navbar-height;

@@ -6,14 +6,17 @@
     position: fixed; // independent of scrolling
     width: 100%;
     @include breakpoint(minimum) {
-        height: $navbar-height-minimum;
+        height: $navbar-height-compact;
     }
     @include breakpoint(small) {
         height: $navbar-height;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: space-between;
     }
-    z-index: 1;
+    border-bottom: .05rem solid $gray;
     background-color: $light-gray;
-    border-bottom: .05em solid $gray;
+    z-index: 1;
 
     // prevent text highlighting
     -webkit-touch-callout: none; // iOS Safari
@@ -28,14 +31,14 @@
 #logo {
     font: $logo;
     color: $gray;
-    padding: .1em .3em;
-
     @include breakpoint(minimum) {
         display: flex;
         justify-content: center;
     }
     @include breakpoint(small) {
+        height: 100%;
         display: inline-flex;
+        align-items: center;
     }
 
     > * {
@@ -44,21 +47,19 @@
     }
 
     > #chael {
-        padding-right: .2em;
+        padding-right: .5rem;
     }
 }
 
 #menu {
+    $spacing: .5rem;
     padding: 0;
-    margin: 0;
+    margin: 0 -#{$spacing};
     @include breakpoint(minimum) {
         display: flex;
         justify-content: center;
     }
     @include breakpoint(small) {
-        position: absolute;
-        right: 0;
-        padding-right: .9em; // equivalent to #logo's padding-left of .3em
         height: 100%;
         display: inline-flex;
         align-items: center;
@@ -67,7 +68,7 @@
     > li {
         display: inline-block;
         list-style-type: none;
-        margin: 0 .5em;
+        margin: 0 #{$spacing};
 
         > a {
             font: $h1;

@@ -1,5 +1,5 @@
-$minimum: 24em;
-$small:   40em;
+$minimum: 24rem;
+$small:   40rem;
 
 @mixin breakpoint($size) {
     @if $size == minimum {
