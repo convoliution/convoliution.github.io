@@ -1,4 +1,5 @@
 @import 'globals';
+@import 'styles';
 @import 'utils';
 @import 'breakpoints';
 
@@ -12,6 +13,8 @@ html {
 
 p {
     margin: 0; // why would it have a default margin, anyway?
+    margin-bottom: 1rem;
+    cursor: default;
 }
 
 a {
@@ -32,10 +35,12 @@ a {
         padding: .5rem 1rem;
     }
 
-    // mostly for testing purposes
-    @include calc(height, '100vh - #{$navbar-height-compact}');
+    // mostly for placeholder purposes
+    font: $h2;
+    color: $white;
+    @include calc(min-height, '100vh - #{$navbar-height-compact}');
     @include breakpoint(medium) {
-        @include calc(height, '100vh - #{$navbar-height}');
+        @include calc(min-height, '100vh - #{$navbar-height}');
     }
 }
 
