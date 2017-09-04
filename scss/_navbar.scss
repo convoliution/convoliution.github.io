@@ -5,14 +5,16 @@
 #navbar {
     position: fixed; // independent of scrolling
     width: 100%;
-    @include breakpoint(minimum) {
-        height: $navbar-height-compact;
-    }
-    @include breakpoint(small) {
+
+    height: $navbar-height-compact;
+    @include breakpoint(medium) {
         height: $navbar-height;
         padding: 0 1rem;
         display: flex;
         justify-content: space-between;
+    }
+    @include breakpoint(large) {
+        padding: 0 6rem;
     }
     border-bottom: .05rem solid $gray;
     background-color: $light-gray;
@@ -31,11 +33,10 @@
 #logo {
     font: $logo;
     color: $gray;
-    @include breakpoint(minimum) {
-        display: flex;
-        justify-content: center;
-    }
-    @include breakpoint(small) {
+
+    display: flex;
+    justify-content: center;
+    @include breakpoint(medium) {
         height: 100%;
         display: inline-flex;
         align-items: center;
@@ -55,11 +56,10 @@
     $spacing: .5rem;
     padding: 0;
     margin: 0 -#{$spacing};
-    @include breakpoint(minimum) {
-        display: flex;
-        justify-content: center;
-    }
-    @include breakpoint(small) {
+
+    display: flex;
+    justify-content: center;
+    @include breakpoint(medium) {
         height: 100%;
         display: inline-flex;
         align-items: center;
@@ -71,8 +71,12 @@
         margin: 0 #{$spacing};
 
         > a {
-            font: $h1;
             color: $gray;
+
+            font: $h2;
+            @include breakpoint(medium) {
+                font: $h1;
+            }
         }
     }
 }

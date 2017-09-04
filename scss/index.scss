@@ -19,17 +19,19 @@ a {
 }
 
 #content {
-    @include breakpoint(minimum) {
-        padding-top: $navbar-height-compact;
-    }
-    @include breakpoint(small) {
+    padding-top: $navbar-height-compact;
+    @include breakpoint(medium) {
         padding-top: $navbar-height;
     }
 }
 
 .section {
     width: 100%;
-    @include calc(height, '100vh - #{$navbar-height}'); // mostly for testing purposes
+    // mostly for testing purposes
+    @include calc(height, '100vh - #{$navbar-height-compact}');
+    @include breakpoint(medium) {
+        @include calc(height, '100vh - #{$navbar-height}');
+    }
 }
 
 @import 'navbar';
