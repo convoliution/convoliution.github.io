@@ -8,7 +8,7 @@ $(function() {
         } else {
             var minLiuLeft = -$('#chael').outerWidth();
         }
-        var liuLeft = minLiuLeft*$(window).scrollTop()/$('#landing').outerHeight(); // relate scroll distance to 'mi liu' distance
+        var liuLeft = minLiuLeft*$(window).scrollTop()/$('#landing').outerHeight(); // relate 'mi liu' distance to scroll distance
 
         // #liu position and #chael opacity
         if (liuLeft >= 0) {
@@ -55,8 +55,10 @@ $(function() {
     });
 
     $('#navbar').on('click', '.nav', function(event) {
+        posCurrent = $(window).scrollTop()
+        posTarget = $($(this).attr('href')).offset().top - $('#navbar').outerHeight()
         $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top - $('#navbar').outerHeight()
-        }, 1000);
+            scrollTop: posTarget
+        }, Math.abs(posTarget - posCurrent)/2);
     });
 });
