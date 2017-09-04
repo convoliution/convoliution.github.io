@@ -55,8 +55,8 @@ $(function() {
     });
 
     $('#navbar').on('click', '.nav', function(event) {
-        var posCurrent = $(window).scrollTop()
-        var posTarget = $($(this).attr('href')).offset().top - $('#navbar').outerHeight()
+        var posCurrent = $(window).scrollTop();
+        var posTarget = $($(this).attr('href')).offset().top - $('#navbar').outerHeight();
         $('html, body').animate({
             scrollTop: posTarget
         }, Math.abs(posTarget - posCurrent)/2);
