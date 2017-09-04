@@ -14,7 +14,7 @@
         justify-content: space-between;
     }
     @include breakpoint(large) {
-        padding: 0 6rem;
+        padding: 0 4rem;
     }
     border-bottom: .05rem solid $gray;
     background-color: $light-gray;
