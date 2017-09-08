@@ -58,7 +58,7 @@
     margin: 0 -#{$spacing};
 
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     @include breakpoint(medium) {
         height: 100%;
         display: inline-flex;
