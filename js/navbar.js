@@ -1,4 +1,24 @@
 $(function() {
+    updateLogo(); // set Logo position on document ready
+    $('#mi').css('opacity', 1);
+    $('#liu').css('opacity', 1);
+
+    $(window).scroll(function(){
+        updateLogo();
+    });
+
+    $('#navbar a').click(function(event) {
+        event.preventDefault(); // prevent default behavior
+    });
+
+    $('#navbar').on('click', '.nav', function(event) {
+        var posCurrent = $(window).scrollTop();
+        var posTarget = $($(this).attr('href')).offset().top - $('#navbar').outerHeight();
+        $('html, body').animate({
+            scrollTop: posTarget
+        }, 250 + Math.abs(posTarget - posCurrent)/3);
+    });
+
     function updateLogo() {
         isCompactNavbar = $('#logo').css('align-items') === 'normal';
         if (isCompactNavbar) {
@@ -41,24 +61,4 @@ $(function() {
             $('#chael').css('left', 0); // reset in case of window resize
         }
     }
-
-    updateLogo(); // set Logo position on document ready
-    $('#mi').css('opacity', 1);
-    $('#liu').css('opacity', 1);
-
-    $(window).scroll(function(){
-        updateLogo();
-    });
-
-    $('#navbar a').click(function(event) {
-        event.preventDefault(); // prevent default behavior
-    });
-
-    $('#navbar').on('click', '.nav', function(event) {
-        var posCurrent = $(window).scrollTop();
-        var posTarget = $($(this).attr('href')).offset().top - $('#navbar').outerHeight();
-        $('html, body').animate({
-            scrollTop: posTarget
-        }, 250 + Math.abs(posTarget - posCurrent)/3);
-    });
 });
