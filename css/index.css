@@ -18,7 +18,7 @@ a {
     #content {
       padding-top: 4.25rem; } }
 
-.section {
+section {
   width: 100%;
   padding: .5rem .5rem;
   font: 1.75rem "Lato", sans-serif;
@@ -27,10 +27,10 @@ a {
   min-height: -webkit-calc(100vh - 6.5rem);
   min-height: calc(100vh - 6.5rem); }
   @media only screen and (min-width: 40rem) {
-    .section {
+    section {
       padding: .5rem 1rem; } }
   @media only screen and (min-width: 40rem) {
-    .section {
+    section {
       min-height: -moz-calc(100vh - 4.25rem);
       min-height: -webkit-calc(100vh - 4.25rem);
       min-height: calc(100vh - 4.25rem); } }
