@@ -12,10 +12,10 @@ p {
 a {
   text-decoration: none; }
 
-#content {
+main {
   padding-top: 6.5rem; }
   @media only screen and (min-width: 40rem) {
-    #content {
+    main {
       padding-top: 4.25rem; } }
 
 section {

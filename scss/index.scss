@@ -21,7 +21,7 @@ a {
     text-decoration: none; // no underline
 }
 
-#content {
+main {
     padding-top: $navbar-height-compact;
     @include breakpoint(medium) {
         padding-top: $navbar-height;
