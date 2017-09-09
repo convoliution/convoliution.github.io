@@ -8,10 +8,7 @@ $(function() {
     });
 
     $('#navbar a').click(function(event) {
-        event.preventDefault(); // prevent default behavior
-    });
-
-    $('#navbar').on('click', '.nav', function(event) {
+        event.preventDefault();
         var posCurrent = $(window).scrollTop();
         var posTarget = $($(this).attr('href')).offset().top - $('#navbar').outerHeight();
         $('html, body').animate({
