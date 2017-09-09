@@ -1,5 +1,5 @@
 $(function() {
-    function updateLiu() {
+    function updateLogo() {
         isCompactNavbar = $('#logo').css('align-items') === 'normal';
         if (isCompactNavbar) {
             var minLiuLeft = -$('#chael').outerWidth()/2;
@@ -42,12 +42,12 @@ $(function() {
         }
     }
 
-    updateLiu(); // set Liu position on document ready
+    updateLogo(); // set Logo position on document ready
     $('#mi').css('opacity', 1);
     $('#liu').css('opacity', 1);
 
     $(window).scroll(function(){
-        updateLiu();
+        updateLogo();
     });
 
     $('#navbar a').click(function(event) {
