@@ -20,6 +20,7 @@ $(function() {
 
     $(window).resize(function() {
         updateLogo();
+        updateUnderline();
     });
 
     function updateLogo() {
