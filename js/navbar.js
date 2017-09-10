@@ -18,6 +18,10 @@ $(function() {
         }, 250 + Math.abs(posTarget - posCurrent)/3);
     });
 
+    $(window).resize(function() {
+        updateLogo();
+    });
+
     function updateLogo() {
         isCompactNavbar = $('#logo').css('align-items') === 'normal';
 
