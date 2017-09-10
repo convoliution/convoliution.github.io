@@ -1,10 +1,12 @@
 $(function() {
     updateLogo(); // set Logo position on document ready
+    updateUnderline(); // set Underline position on document ready
     $('#mi').css('opacity', 1);
     $('#liu').css('opacity', 1);
 
     $(window).scroll(function(){
         updateLogo();
+        updateUnderline();
     });
 
     $('#navbar a').click(function(event) {
@@ -18,6 +20,7 @@ $(function() {
 
     function updateLogo() {
         isCompactNavbar = $('#logo').css('align-items') === 'normal';
+
         if (isCompactNavbar) {
             var minLiuLeft = -$('#chael').outerWidth()/2;
             var maxMiLeft = $('#chael').outerWidth()/2;
@@ -56,6 +59,45 @@ $(function() {
         } else {
             $('#mi').css('left', 0); // reset in case of window resize
             $('#chael').css('left', 0); // reset in case of window resize
+        }
+    }
+
+    function updateUnderline() {
+        var actionDistance = 8*$('#navbar').outerHeight();
+        var aboutTop = $('#about').position().top - $('#navbar').outerHeight();
+        var aboutLeft = $('#menu-about').position().left;
+        var aboutWidth = $('#menu-about').outerWidth(true);
+        var projectsTop = $('#projects').position().top - $('#navbar').outerHeight();
+        var projectsLeft = $('#menu-projects').position().left;
+        var projectsWidth = $('#menu-projects').outerWidth(true);
+        var contactTop = $('#contact').position().top - $('#navbar').outerHeight();
+        var contactLeft = $('#menu-contact').position().left;
+        var contactWidth = $('#menu-contact').outerWidth(true);
+        var posCurrent = $(window).scrollTop();
+        if (posCurrent < aboutTop - actionDistance) {
+            $('#underline').css('left', aboutLeft);
+            $('#underline').css('width', 0);
+        } else if (posCurrent < aboutTop) {
+            var relPosCurrent = posCurrent - aboutTop + actionDistance;
+            $('#underline').css('left', aboutLeft);
+            $('#underline').css('width', relPosCurrent*aboutWidth/actionDistance);
+        } else if (posCurrent < projectsTop - actionDistance) {
+            $('#underline').css('left', aboutLeft);
+            $('#underline').css('width', aboutWidth);
+        } else if (posCurrent < projectsTop) {
+            var relPosCurrent = posCurrent - projectsTop + actionDistance;
+            $('#underline').css('left', (relPosCurrent*(projectsLeft-aboutLeft)/actionDistance)+aboutLeft);
+            $('#underline').css('width', (relPosCurrent*(projectsWidth-aboutWidth)/actionDistance)+aboutWidth);
+        } else if (posCurrent < contactTop - actionDistance) {
+            $('#underline').css('left', projectsLeft);
+            $('#underline').css('width', projectsWidth);
+        } else if (posCurrent < contactTop) {
+            var relPosCurrent = posCurrent - contactTop + actionDistance;
+            $('#underline').css('left', (relPosCurrent*(contactLeft-projectsLeft)/actionDistance)+projectsLeft);
+            $('#underline').css('width', (relPosCurrent*(contactWidth-projectsWidth)/actionDistance)+projectsWidth);
+        } else {
+            $('#underline').css('left', contactLeft);
+            $('#underline').css('width', contactWidth);
         }
     }
 });

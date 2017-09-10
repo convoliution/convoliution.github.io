@@ -96,6 +96,12 @@ section {
         #menu > li > a {
           font: 2rem "Lato", sans-serif; } }
 
+#underline {
+  position: absolute;
+  bottom: .5rem;
+  height: .2rem;
+  background-color: #66b3ff; }
+
 #landing {
   background-color: #333333; }
 
