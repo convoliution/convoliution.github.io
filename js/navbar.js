@@ -68,41 +68,57 @@ $(function() {
     }
 
     function updateUnderline() {
-        var actionDistance = 8*$('#navbar').outerHeight();
-        var aboutTop = $('#about').position().top - $('#navbar').outerHeight();
-        var aboutLeft = $('#menu-about').position().left;
-        var aboutWidth = $('#menu-about').outerWidth(true);
-        var projectsTop = $('#projects').position().top - $('#navbar').outerHeight();
-        var projectsLeft = $('#menu-projects').position().left;
-        var projectsWidth = $('#menu-projects').outerWidth(true);
-        var contactTop = $('#contact').position().top - $('#navbar').outerHeight();
-        var contactLeft = $('#menu-contact').position().left;
-        var contactWidth = $('#menu-contact').outerWidth(true);
         var posCurrent = $(window).scrollTop();
-        if (posCurrent < aboutTop - actionDistance) {
-            $('#underline').css('left', aboutLeft);
-            $('#underline').css('width', 0);
-        } else if (posCurrent < aboutTop) {
-            var relPosCurrent = posCurrent - aboutTop + actionDistance;
-            $('#underline').css('left', aboutLeft);
-            $('#underline').css('width', relPosCurrent*aboutWidth/actionDistance);
-        } else if (posCurrent < projectsTop - actionDistance) {
-            $('#underline').css('left', aboutLeft);
-            $('#underline').css('width', aboutWidth);
-        } else if (posCurrent < projectsTop) {
-            var relPosCurrent = posCurrent - projectsTop + actionDistance;
-            $('#underline').css('left', (relPosCurrent*(projectsLeft-aboutLeft)/actionDistance)+aboutLeft);
-            $('#underline').css('width', (relPosCurrent*(projectsWidth-aboutWidth)/actionDistance)+aboutWidth);
-        } else if (posCurrent < contactTop - actionDistance) {
-            $('#underline').css('left', projectsLeft);
-            $('#underline').css('width', projectsWidth);
-        } else if (posCurrent < contactTop) {
-            var relPosCurrent = posCurrent - contactTop + actionDistance;
-            $('#underline').css('left', (relPosCurrent*(contactLeft-projectsLeft)/actionDistance)+projectsLeft);
-            $('#underline').css('width', (relPosCurrent*(contactWidth-projectsWidth)/actionDistance)+projectsWidth);
+
+        // store the top positions of each section
+        var secTops = {}
+        secTops["about"] = $('#about').position().top - $('#navbar').outerHeight();
+        secTops["projects"] = $('#projects').position().top - $('#navbar').outerHeight();
+        secTops["contact"] = $('#contact').position().top - $('#navbar').outerHeight();
+
+        // identify the previous and next sections
+        if (posCurrent < secTops["about"]) {
+            var secPrev = "landing";
+            var secNext = "about";
+        } else if (posCurrent < secTops["projects"]) {
+            var secPrev = "about";
+            var secNext = "projects";
+        } else if (posCurrent < secTops["contact"]) {
+            var secPrev = "projects";
+            var secNext = "contact";
         } else {
-            $('#underline').css('left', contactLeft);
-            $('#underline').css('width', contactWidth);
+            var secPrev = "contact";
+            var secNext = "contact";
+        }
+
+        var actionDistance = 0.2 * $('#'+secPrev).outerHeight(); // distance over which underline transitions
+
+        // left position and width of nav button corresponding to next section
+        var navNextLeft = $('#menu-'+secNext).position().left;
+        var navNextWidth = $('#menu-'+secNext).outerWidth(true);
+
+        if (posCurrent < secTops["about"]) { // first section is animated differently from the rest
+            if (posCurrent < secTops[secNext] - actionDistance) { // transition
+                $('#underline').css('left', navNextLeft);
+                $('#underline').css('width', 0);
+            } else { // in section
+                var relPosCurrent = posCurrent - secTops[secNext] + actionDistance; // simplifies calculations
+                $('#underline').css('left', navNextLeft);
+                $('#underline').css('width', relPosCurrent*navNextWidth/actionDistance);
+            }
+        } else {
+            // left position and width of nav button corresponding to previous section
+            var navPrevLeft = $('#menu-'+secPrev).position().left;
+            var navPrevWidth = $('#menu-'+secPrev).outerWidth(true);
+
+            if (posCurrent < secTops[secNext] - actionDistance) { // transition
+                $('#underline').css('left', navPrevLeft);
+                $('#underline').css('width', navPrevWidth);
+            } else { // in section
+                var relPosCurrent = posCurrent - secTops[secNext] + actionDistance; // simplifies calculations
+                $('#underline').css('left', (relPosCurrent*(navNextLeft-navPrevLeft)/actionDistance)+navPrevLeft);
+                $('#underline').css('width', (relPosCurrent*(navNextWidth-navPrevWidth)/actionDistance)+navPrevWidth);
+            }
         }
     }
 });
