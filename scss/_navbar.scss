@@ -80,3 +80,10 @@
         }
     }
 }
+
+#underline {
+    position: absolute;
+    bottom: .5rem;
+    height: .2rem;
+    background-color: $blue;
+}
