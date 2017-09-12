@@ -91,18 +91,19 @@ $(function() {
             var secNext = "contact";
         }
 
-        var actionDistance = 0.2 * $('#'+secPrev).outerHeight(); // distance over which underline transitions
+        // distance over which underline transitions
+        var actionDistance = 0.2 * $('#'+secPrev).outerHeight(); // 20% of previous section's height
 
         // left position and width of nav button corresponding to next section
         var navNextLeft = $('#menu-'+secNext).position().left;
         var navNextWidth = $('#menu-'+secNext).outerWidth(true);
 
         if (posCurrent < secTops["about"]) { // first section is animated differently from the rest
-            if (posCurrent < secTops[secNext] - actionDistance) { // transition
+            if (posCurrent < secTops[secNext] - actionDistance) { // in section
                 $('#underline').css('left', navNextLeft);
                 $('#underline').css('width', 0);
-            } else { // in section
-                var relPosCurrent = posCurrent - secTops[secNext] + actionDistance; // simplifies calculations
+            } else { // transition
+                var relPosCurrent = posCurrent - secTops[secNext] + actionDistance; // start at value of 0 when transition startss
                 $('#underline').css('left', navNextLeft);
                 $('#underline').css('width', relPosCurrent*navNextWidth/actionDistance);
             }
@@ -111,11 +112,11 @@ $(function() {
             var navPrevLeft = $('#menu-'+secPrev).position().left;
             var navPrevWidth = $('#menu-'+secPrev).outerWidth(true);
 
-            if (posCurrent < secTops[secNext] - actionDistance) { // transition
+            if (posCurrent < secTops[secNext] - actionDistance) { // in section
                 $('#underline').css('left', navPrevLeft);
                 $('#underline').css('width', navPrevWidth);
-            } else { // in section
-                var relPosCurrent = posCurrent - secTops[secNext] + actionDistance; // simplifies calculations
+            } else { // transition
+                var relPosCurrent = posCurrent - secTops[secNext] + actionDistance; // start at value of 0 when transition starts
                 $('#underline').css('left', (relPosCurrent*(navNextLeft-navPrevLeft)/actionDistance)+navPrevLeft);
                 $('#underline').css('width', (relPosCurrent*(navNextWidth-navPrevWidth)/actionDistance)+navPrevWidth);
             }
