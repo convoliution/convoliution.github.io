@@ -21,7 +21,7 @@ main {
 section {
   width: 100%;
   padding: .5rem .5rem;
-  font: 1.75rem "Lato", sans-serif;
+  font: 1.75rem "LatoRegular", sans-serif;
   color: #FCFCFC;
   min-height: -moz-calc(100vh - 6.5rem);
   min-height: -webkit-calc(100vh - 6.5rem);
@@ -60,7 +60,7 @@ section {
       padding: 0 4rem; } }
 
 #logo {
-  font: 3rem "Lato", sans-serif;
+  font: 3rem "LatoRegular", sans-serif;
   color: #8d8d8d;
   display: flex;
   justify-content: center; }
@@ -91,10 +91,10 @@ section {
     margin: 0 0.5rem; }
     #menu > li > a {
       color: #8d8d8d;
-      font: 1.75rem "Lato", sans-serif; }
+      font: 1.75rem "LatoRegular", sans-serif; }
       @media only screen and (min-width: 40rem) {
         #menu > li > a {
-          font: 2rem "Lato", sans-serif; } }
+          font: 2rem "LatoRegular", sans-serif; } }
 
 #underline {
   position: absolute;
