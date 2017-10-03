@@ -21,8 +21,6 @@ main {
 section {
   width: 100%;
   padding: .5rem .5rem;
-  font: 1.75rem "LatoRegular", sans-serif;
-  color: #FCFCFC;
   min-height: -moz-calc(100vh - 6.5rem);
   min-height: -webkit-calc(100vh - 6.5rem);
   min-height: calc(100vh - 6.5rem); }
@@ -103,15 +101,23 @@ section {
   background-color: #66b3ff; }
 
 #landing {
-  background-color: #333333; }
+  background-color: #333333;
+  font: 1.75rem "LatoRegular", sans-serif;
+  color: #FCFCFC; }
 
 #about {
-  background-color: #666666; }
+  background-color: #666666;
+  font: 1.75rem "LatoRegular", sans-serif;
+  color: #FCFCFC; }
 
 #projects {
-  background-color: #999999; }
+  background-color: #999999;
+  font: 1.75rem "LatoRegular", sans-serif;
+  color: #FCFCFC; }
 
 #contact {
-  background-color: #CCCCCC; }
+  background-color: #CCCCCC;
+  font: 1.75rem "LatoRegular", sans-serif;
+  color: #333333; }
 
 /*# sourceMappingURL=index.css.map */

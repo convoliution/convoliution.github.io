@@ -35,9 +35,6 @@ section {
         padding: .5rem 1rem;
     }
 
-    // mostly for placeholder purposes
-    font: $h2;
-    color: $white;
     @include calc(min-height, '100vh - #{$navbar-height-compact}');
     @include breakpoint(medium) {
         @include calc(min-height, '100vh - #{$navbar-height}');
