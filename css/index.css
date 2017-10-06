@@ -51,6 +51,7 @@ section {
     #navbar {
       height: 4.25rem;
       padding: 0 1rem;
+      display: -webkit-flex;
       display: flex;
       justify-content: space-between; } }
   @media only screen and (min-width: 64rem) {
@@ -60,12 +61,16 @@ section {
 #logo {
   font: 3rem "LatoRegular", sans-serif;
   color: #8d8d8d;
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: center;
   justify-content: center; }
   @media only screen and (min-width: 40rem) {
     #logo {
       height: 100%;
+      display: -webkit-inline-flex;
       display: inline-flex;
+      -webkit-align-items: center;
       align-items: center; } }
   #logo > * {
     position: relative;
@@ -76,12 +81,16 @@ section {
 #menu {
   padding: 0;
   margin: 0 -0.5rem;
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: space-evenly;
   justify-content: space-evenly; }
   @media only screen and (min-width: 40rem) {
     #menu {
       height: 100%;
+      display: -webkit-inline-flex;
       display: inline-flex;
+      -webkit-align-items: center;
       align-items: center; } }
   #menu > li {
     display: inline-block;

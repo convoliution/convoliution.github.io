@@ -1,5 +1,6 @@
 @import 'globals';
 @import 'styles';
+@import 'flexbox';
 @import 'breakpoints';
 
 #navbar {
@@ -10,7 +11,7 @@
     @include breakpoint(medium) {
         height: $navbar-height;
         padding: 0 1rem;
-        display: flex;
+        @include display-flex();
         justify-content: space-between;
     }
     @include breakpoint(large) {
@@ -34,12 +35,12 @@
     font: $logo;
     color: $gray;
 
-    display: flex;
-    justify-content: center;
+    @include display-flex();
+    @include justify-content(center);
     @include breakpoint(medium) {
         height: 100%;
-        display: inline-flex;
-        align-items: center;
+        @include display-inline-flex();
+        @include align-items(center);
     }
 
     > * {
@@ -57,12 +58,12 @@
     padding: 0;
     margin: 0 -#{$spacing};
 
-    display: flex;
-    justify-content: space-evenly;
+    @include display-flex();
+    @include justify-content(space-evenly);
     @include breakpoint(medium) {
         height: 100%;
-        display: inline-flex;
-        align-items: center;
+        @include display-inline-flex();
+        @include align-items(center);
     }
 
     > li {
