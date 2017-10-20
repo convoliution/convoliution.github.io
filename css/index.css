@@ -33,6 +33,33 @@ section {
       min-height: -webkit-calc(100vh - 4.25rem);
       min-height: calc(100vh - 4.25rem); } }
 
+nav {
+  font-family: 'LatoRegular', sans-serif; }
+
+main {
+  font-family: 'LatoRegular', sans-serif; }
+  main h1 {
+    font-size: 3.3rem;
+    font-weight: 800; }
+  main h2 {
+    font-size: 2.7rem;
+    font-weight: 800; }
+  main h3 {
+    font-size: 2.4rem;
+    font-weight: 700; }
+  main h4 {
+    font-size: 2.1rem;
+    font-weight: 600; }
+  main h5 {
+    font-size: 1.8rem;
+    font-weight: 500; }
+  main h6 {
+    font-size: 1.5rem;
+    font-weight: 400; }
+  main p {
+    font-family: 'LatoLight', sans-serif;
+    font-size: 1.5rem; }
+
 #navbar {
   position: fixed;
   width: 100%;
@@ -59,7 +86,7 @@ section {
       padding: 0 4rem; } }
 
 #logo {
-  font: 3rem "LatoRegular", sans-serif;
+  font-size: 3rem;
   color: #8d8d8d;
   display: -webkit-flex;
   display: flex;
@@ -98,10 +125,10 @@ section {
     margin: 0 0.5rem; }
     #menu > li > a {
       color: #8d8d8d;
-      font: 1.75rem "LatoRegular", sans-serif; }
+      font-size: 1.75rem; }
       @media only screen and (min-width: 40rem) {
         #menu > li > a {
-          font: 2rem "LatoRegular", sans-serif; } }
+          font-size: 2rem; } }
 
 #underline {
   position: absolute;
@@ -111,22 +138,18 @@ section {
 
 #landing {
   background-color: #333333;
-  font: 1.75rem "LatoRegular", sans-serif;
   color: #FCFCFC; }
 
 #about {
   background-color: #666666;
-  font: 1.75rem "LatoRegular", sans-serif;
   color: #FCFCFC; }
 
 #projects {
   background-color: #999999;
-  font: 1.75rem "LatoRegular", sans-serif;
   color: #FCFCFC; }
 
 #contact {
   background-color: #CCCCCC;
-  font: 1.75rem "LatoRegular", sans-serif;
   color: #333333; }
 
 /*# sourceMappingURL=index.css.map */
