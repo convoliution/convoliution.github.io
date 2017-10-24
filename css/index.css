@@ -58,7 +58,12 @@ main {
     font-weight: 400; }
   main p {
     font-family: 'LatoLight', sans-serif;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    font-weight: 400; }
+    main p.short {
+      line-height: 1.2; }
+    main p.long {
+      line-height: 1.5; }
 
 #navbar {
   position: fixed;
