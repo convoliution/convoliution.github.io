@@ -26,18 +26,18 @@ main {
     @include breakpoint(medium) {
         padding-top: $navbar-height;
     }
-}
 
-section {
-    width: 100%;
-    padding: .5rem .5rem;
-    @include breakpoint(medium) {
-        padding: .5rem 1rem;
-    }
+    > section {
+        width: 100%;
+        padding: .5rem .5rem;
+        @include breakpoint(medium) {
+            padding: .5rem 1rem;
+        }
 
-    @include calc(min-height, '100vh - #{$navbar-height-compact}');
-    @include breakpoint(medium) {
-        @include calc(min-height, '100vh - #{$navbar-height}');
+        @include calc(min-height, '100vh - #{$navbar-height-compact}');
+        @include breakpoint(medium) {
+            @include calc(min-height, '100vh - #{$navbar-height}');
+        }
     }
 }
 
