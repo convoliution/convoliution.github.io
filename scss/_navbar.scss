@@ -54,9 +54,15 @@
 }
 
 #menu {
-    $spacing: .5rem;
+    $medium-spacing: .5rem;
+    $large-spacing: 1rem;
+
+
     padding: 0;
-    margin: 0 -#{$spacing};
+    margin: 0 -#{$medium-spacing};
+    @include breakpoint(large) {
+        margin: 0 -#{$large-spacing};
+    }
 
     @include display-flex();
     @include justify-content(space-evenly);
@@ -69,7 +75,10 @@
     > li {
         display: inline-block;
         list-style-type: none;
-        margin: 0 #{$spacing};
+        margin: 0 #{$medium-spacing};
+        @include breakpoint(large) {
+            margin: 0 #{$large-spacing};
+        }
 
         > a {
             color: $gray;

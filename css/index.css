@@ -45,7 +45,7 @@ main {
     main > section > div {
       align-self: center;
       text-align: center;
-      padding: 1em;
+      padding: 1rem;
       grid-column: 1 / 4;
       grid-row: 2 / 3; }
       @media only screen and (min-width: 40rem) {
@@ -142,6 +142,9 @@ main {
   display: flex;
   -webkit-justify-content: space-evenly;
   justify-content: space-evenly; }
+  @media only screen and (min-width: 64rem) {
+    #menu {
+      margin: 0 -1rem; } }
   @media only screen and (min-width: 40rem) {
     #menu {
       height: 100%;
@@ -153,6 +156,9 @@ main {
     display: inline-block;
     list-style-type: none;
     margin: 0 0.5rem; }
+    @media only screen and (min-width: 64rem) {
+      #menu > li {
+        margin: 0 1rem; } }
     #menu > li > a {
       color: #8d8d8d;
       font-size: 1.75rem; }
