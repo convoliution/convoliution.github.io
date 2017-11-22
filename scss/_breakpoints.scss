@@ -13,6 +13,6 @@ $large:  64rem;
         @media only screen and (min-width: $large) { @content; }
     }
     @else {
-        @warn "Breakpoint mixin only supports: minimum, small.";
+        @warn "Breakpoint mixin only supports: small, medium, large.";
     }
 }
