@@ -19,13 +19,9 @@ main {
       padding-top: 4.25rem; } }
   main > section {
     width: 100%;
-    padding: .5rem .5rem;
     min-height: -moz-calc(100vh - 6.5rem);
     min-height: -webkit-calc(100vh - 6.5rem);
     min-height: calc(100vh - 6.5rem); }
-    @media only screen and (min-width: 40rem) {
-      main > section {
-        padding: .5rem 1rem; } }
     @media only screen and (min-width: 40rem) {
       main > section {
         min-height: -moz-calc(100vh - 4.25rem);
