@@ -43,7 +43,11 @@
         @include align-items(center);
     }
 
-    > * {
+    > noscript {
+        position: absolute;
+    }
+
+    > #mi, > #chael, > #liu {
         position: relative;
         opacity: 0; // hide logo during initial positioning while page loads
     }

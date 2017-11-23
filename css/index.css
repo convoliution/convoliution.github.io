@@ -146,7 +146,9 @@ main {
       display: inline-flex;
       -webkit-align-items: center;
       align-items: center; } }
-  #logo > * {
+  #logo > noscript {
+    position: absolute; }
+  #logo > #mi, #logo > #chael, #logo > #liu {
     position: relative;
     opacity: 0; }
   #logo > #chael {
