@@ -1,5 +1,15 @@
 @import 'styles';
+@import 'transform';
 
 #landing {
-    
+    s {
+        -webkit-text-decoration-color: red; // Safari
+                text-decoration-color: red;
+    }
+    ins {
+        text-decoration: none;
+        position: absolute;
+        @include transform(rotate(12deg) translateX(-.4rem) translateY(1.3rem));
+        color: $gray;
+    }
 }

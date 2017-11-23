@@ -30,6 +30,8 @@ main {
         min-height: -moz-calc(100vh - 4.25rem);
         min-height: -webkit-calc(100vh - 4.25rem);
         min-height: calc(100vh - 4.25rem); } }
+    main > section p {
+      margin: 0 auto; }
     main > section > img {
       grid-column: 1 / 4;
       grid-row: 1 / 2; }
@@ -63,6 +65,8 @@ nav {
 
 main {
   font-family: 'LatoRegular', sans-serif; }
+  main h1, main h2, main h3, main h4, main h5, main h6 {
+    margin-top: 0; }
   main h1 {
     font-size: 3.3rem;
     font-weight: 800; }
@@ -83,11 +87,17 @@ main {
     font-weight: 400; }
   main p {
     font-family: 'LatoLight', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 400; }
     main p.short {
+      text-align: left;
+      max-width: 24rem;
+      font-size: .9rem;
       line-height: 1.2; }
     main p.long {
+      text-align: left;
+      max-width: 40rem;
+      font-size: 1.2rem;
       line-height: 1.5; }
 
 #navbar {
@@ -171,5 +181,16 @@ main {
   bottom: .5rem;
   height: .2rem;
   background-color: #66b3ff; }
+
+#landing s {
+  -webkit-text-decoration-color: red;
+  text-decoration-color: red; }
+#landing ins {
+  text-decoration: none;
+  position: absolute;
+  -webkit-transform: rotate(12deg) translateX(-0.4rem) translateY(1.3rem);
+  -ms-transform: rotate(12deg) translateX(-0.4rem) translateY(1.3rem);
+  transform: rotate(12deg) translateX(-0.4rem) translateY(1.3rem);
+  color: #8d8d8d; }
 
 /*# sourceMappingURL=index.css.map */
