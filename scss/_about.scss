@@ -1,4 +1,5 @@
 @import 'styles';
+@import 'breakpoints';
 
 #about {
     ol {
@@ -11,9 +12,46 @@
     }
 
     #rust {
-        font-family: 'LatoRegular', sans-serif;
         font-size: 3.3rem;
-        font-weight: 800;
         margin-bottom: 2rem;
+        &::after {
+            content: "::<T>"
+        }
+    }
+
+    #python {
+        &::after {
+            content: "()";
+        }
+    }
+
+    #javascript {
+        &::after {
+            content: "+[]";
+        }
+    }
+
+    #cpp {
+        &::after {
+            content: "->questionable_syntax_additions";
+        }
+    }
+
+    #java {
+        &::after {
+            content: ".excessivelyVerboseCoreAPI"
+        }
+    }
+
+    .code {
+        &::after {
+            position: absolute;
+            color: $medium-gray;
+
+            display: none;
+            @include breakpoint(large) {
+                display: inline-block;
+            }
+        }
     }
 }
