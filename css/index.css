@@ -64,9 +64,11 @@ nav {
   font-family: 'LatoRegular', sans-serif; }
 
 main {
-  font-family: 'LatoRegular', sans-serif; }
+  font-family: 'LatoLight', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400; }
   main h1, main h2, main h3, main h4, main h5, main h6 {
-    margin-top: 0; }
+    font-family: 'LatoRegular', sans-serif; }
   main h1 {
     font-size: 3.3rem;
     font-weight: 800; }
@@ -85,20 +87,25 @@ main {
   main h6 {
     font-size: 1.5rem;
     font-weight: 400; }
-  main p {
-    font-family: 'LatoLight', sans-serif;
+  main .header {
+    font-family: 'LatoRegular', sans-serif;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 3.6rem; }
+    main .header .title {
+      font-size: 1.7rem; }
+    main .header .subtitle {
+      font-size: 1.6rem; }
+  main p.short {
+    text-align: left;
+    max-width: 24rem;
+    font-size: .9rem;
+    line-height: 1.2; }
+  main p.long {
+    text-align: left;
+    max-width: 40rem;
     font-size: 1.2rem;
-    font-weight: 400; }
-    main p.short {
-      text-align: left;
-      max-width: 24rem;
-      font-size: .9rem;
-      line-height: 1.2; }
-    main p.long {
-      text-align: left;
-      max-width: 40rem;
-      font-size: 1.2rem;
-      line-height: 1.5; }
+    line-height: 1.5; }
 
 #navbar {
   position: fixed;
@@ -192,5 +199,14 @@ main {
   -ms-transform: rotate(12deg) translateX(-0.4rem) translateY(1.3rem);
   transform: rotate(12deg) translateX(-0.4rem) translateY(1.3rem);
   color: #8d8d8d; }
+
+#about ol {
+  list-style-type: none;
+  text-align: left; }
+#about #rust {
+  font-family: 'LatoRegular', sans-serif;
+  font-size: 3.3rem;
+  font-weight: 800;
+  margin-bottom: 2rem; }
 
 /*# sourceMappingURL=index.css.map */

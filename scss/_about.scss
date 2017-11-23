@@ -1,5 +1,19 @@
 @import 'styles';
 
 #about {
-    
+    ol {
+        list-style-type: none;
+        text-align: left;
+
+        > li {
+
+        }
+    }
+
+    #rust {
+        font-family: 'LatoRegular', sans-serif;
+        font-size: 3.3rem;
+        font-weight: 800;
+        margin-bottom: 2rem;
+    }
 }
