@@ -210,15 +210,15 @@ main {
 #about #rust {
   font-size: 3.3rem;
   margin-bottom: 2rem; }
-  #about #rust::after {
-    content: "::<T>"; }
-#about #python::after {
+#about .code#rust::after {
+  content: "::<T>"; }
+#about .code#python::after {
   content: "()"; }
-#about #javascript::after {
+#about .code#javascript::after {
   content: "+[]"; }
-#about #cpp::after {
+#about .code#cpp::after {
   content: "->questionable_syntax_additions"; }
-#about #java::after {
+#about .code#java::after {
   content: ".excessivelyVerboseCoreAPI"; }
 #about .code::after {
   position: absolute;
