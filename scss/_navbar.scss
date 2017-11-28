@@ -1,5 +1,6 @@
 @import 'globals';
 @import 'styles';
+@import 'transitions';
 @import 'flexbox';
 @import 'breakpoints';
 
@@ -17,7 +18,7 @@
     @include breakpoint(large) {
         padding: 0 4rem;
     }
-    border-bottom: .05rem solid $gray;
+    border-bottom: .05rem solid $dark-gray;
     background-color: $light-gray;
     z-index: 1;
 
@@ -29,11 +30,18 @@
        -moz-user-select: none; // Firefox
         -ms-user-select: none; // Microsoft Edge
             user-select: none; // Chrome and Opera
+
+    a {
+        color: $dark-gray;
+        @include transition-multiple(color .2s ease);
+        &:hover {
+            color: $gray;
+        }
+    }
 }
 
 #logo {
     font-size: $logo;
-    color: $gray;
 
     @include display-flex();
     @include justify-content(center);
@@ -84,8 +92,6 @@
         }
 
         > a {
-            color: $gray;
-
             font-size: $nav-button-small;
             @include breakpoint(medium) {
                 font-size: $nav-button-large;

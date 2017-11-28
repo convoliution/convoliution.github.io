@@ -137,10 +137,17 @@ main {
   @media only screen and (min-width: 64rem) {
     #navbar {
       padding: 0 4rem; } }
+  #navbar a {
+    color: #8d8d8d;
+    -webkit-transition: color 0.2s ease;
+    -moz-transition: color 0.2s ease;
+    -o-transition: color 0.2s ease;
+    transition: color 0.2s ease; }
+    #navbar a:hover {
+      color: #aeaeae; }
 
 #logo {
   font-size: 3rem;
-  color: #8d8d8d;
   display: -webkit-flex;
   display: flex;
   -webkit-justify-content: center;
@@ -185,7 +192,6 @@ main {
       #menu > li {
         margin: 0 1rem; } }
     #menu > li > a {
-      color: #8d8d8d;
       font-size: 1.75rem; }
       @media only screen and (min-width: 40rem) {
         #menu > li > a {
