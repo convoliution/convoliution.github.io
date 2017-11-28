@@ -3,12 +3,16 @@
 
 #about {
     ol {
+        width: 75%;
+        @include breakpoint(large) {
+            width: 36rem;
+        }
+        margin-left: auto;
+        margin-right: auto;
+
         list-style-type: none;
         text-align: left;
 
-        > li {
-
-        }
     }
 
     #rust {
