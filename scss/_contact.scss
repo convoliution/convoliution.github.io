@@ -20,7 +20,7 @@
 
         bottom: 0;
         box-shadow: none;
-        @include transition-multiple("bottom .2s ease, box-shadow .2s ease");
+        @include transition-multiple(bottom .2s ease, box-shadow .2s ease);
         &:hover {
             bottom: 2px;
             box-shadow: -1px 2px 4px 0 $gray;

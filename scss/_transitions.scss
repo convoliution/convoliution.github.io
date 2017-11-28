@@ -4,7 +4,7 @@
          -o-transition: $property $duration;
             transition: $property $duration;
 }
-@mixin transition-multiple($transitions) {
+@mixin transition-multiple($transitions...) {
     -webkit-transition: #{$transitions};
        -moz-transition: #{$transitions};
          -o-transition: #{$transitions};

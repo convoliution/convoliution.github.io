@@ -247,10 +247,10 @@ main {
   margin: 0 auto .6rem auto;
   bottom: 0;
   box-shadow: none;
-  -webkit-transition: bottom .2s ease, box-shadow .2s ease;
-  -moz-transition: bottom .2s ease, box-shadow .2s ease;
-  -o-transition: bottom .2s ease, box-shadow .2s ease;
-  transition: bottom .2s ease, box-shadow .2s ease; }
+  -webkit-transition: bottom 0.2s ease, box-shadow 0.2s ease;
+  -moz-transition: bottom 0.2s ease, box-shadow 0.2s ease;
+  -o-transition: bottom 0.2s ease, box-shadow 0.2s ease;
+  transition: bottom 0.2s ease, box-shadow 0.2s ease; }
   #contact > .content-left > a:hover {
     bottom: 2px;
     box-shadow: -1px 2px 4px 0 #8d8d8d; }
