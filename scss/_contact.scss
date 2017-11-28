@@ -1,5 +1,6 @@
 @import 'styles';
-@import 'utils';
+@import 'transitions';
+@import 'breakpoints';
 
 #contact {
     > .content-left > a {
@@ -10,11 +11,20 @@
         grid-template-columns: $a-height auto;
         grid-column-gap: -$a-border;
 
+        position: relative;
         height: $a-height;
         width: 60%;
         border: $a-border solid;
         background-color: $light-gray;
         margin: 0 auto .6rem auto;
+
+        bottom: 0;
+        box-shadow: none;
+        @include transition-multiple("bottom .2s ease, box-shadow .2s ease");
+        &:hover {
+            bottom: 2px;
+            box-shadow: -1px 2px 4px 0 $gray;
+        }
 
         &#email { border-color: #9497CE; } // ProtonMail purple
         &#linkedin { border-color: #0077B5; } // LinkedIn blue
