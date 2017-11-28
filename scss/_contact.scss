@@ -15,15 +15,16 @@
         height: $a-height;
         width: 60%;
         border: $a-border solid;
-        background-color: $light-gray;
         margin: 0 auto .6rem auto;
 
         bottom: 0;
         box-shadow: none;
-        @include transition-multiple(bottom .2s ease, box-shadow .2s ease);
+        background-color: $light-gray;
+        @include transition-multiple(bottom .2s ease, box-shadow .2s ease, background-color .2s ease);
         &:hover {
             bottom: 2px;
             box-shadow: -1px 2px 4px 0 $gray;
+            background-color: $white;
         }
 
         &#email { border-color: #9497CE; } // ProtonMail purple
