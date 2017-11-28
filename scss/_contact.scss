@@ -1,5 +1,57 @@
 @import 'styles';
+@import 'utils';
 
 #contact {
-    
+    > .content-left > a {
+        $a-height: 3.6rem;
+        $a-border: 2px;
+
+        display: grid;
+        grid-template-columns: $a-height auto;
+        grid-column-gap: -$a-border;
+
+        height: $a-height;
+        width: 60%;
+        border: $a-border solid;
+        background-color: $light-gray;
+        margin: 0 auto .6rem auto;
+
+        &#email { border-color: #9497CE; } // ProtonMail purple
+        &#linkedin { border-color: #0077B5; } // LinkedIn blue
+        &#github { border-color: #181717; } // GitHub black
+
+        > img {
+            $img-size: 2rem;
+
+            height: $img-size;
+            width: $img-size;
+
+            grid-column: 1 / 2;
+            align-self: center;
+            justify-self: center;
+        }
+        > div {
+            text-align: center;
+            color: $black;
+
+            grid-column: 2 / 3;
+            align-self: center;
+            justify-self: center;
+        }
+
+        &#email {
+            > div > span {
+                display: none;
+            }
+        }
+    }
+
+    // font settings
+    > .content-left > a {
+        font-family: 'LatoBold', sans-serif;
+        font-size: 1.2rem;
+        @include breakpoint(large) {
+            font-size: 1.5rem;
+        }
+    }
 }

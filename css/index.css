@@ -33,6 +33,7 @@ main {
     main > section p {
       margin: 0 auto; }
     main > section > img {
+      background-color: #333333;
       grid-column: 1 / 4;
       grid-row: 1 / 2; }
       @media only screen and (min-width: 40rem) {
@@ -227,5 +228,41 @@ main {
   @media only screen and (min-width: 64rem) {
     #about .code::after {
       display: inline-block; } }
+
+#contact > .content-left > a {
+  display: grid;
+  grid-template-columns: 3.6rem auto;
+  grid-column-gap: -2px;
+  height: 3.6rem;
+  width: 60%;
+  border: 2px solid;
+  background-color: #f8f8f8;
+  margin: 0 auto .6rem auto; }
+  #contact > .content-left > a#email {
+    border-color: #9497CE; }
+  #contact > .content-left > a#linkedin {
+    border-color: #0077B5; }
+  #contact > .content-left > a#github {
+    border-color: #181717; }
+  #contact > .content-left > a > img {
+    height: 2rem;
+    width: 2rem;
+    grid-column: 1 / 2;
+    align-self: center;
+    justify-self: center; }
+  #contact > .content-left > a > div {
+    text-align: center;
+    color: #333333;
+    grid-column: 2 / 3;
+    align-self: center;
+    justify-self: center; }
+  #contact > .content-left > a#email > div > span {
+    display: none; }
+#contact > .content-left > a {
+  font-family: 'LatoBold', sans-serif;
+  font-size: 1.2rem; }
+  @media only screen and (min-width: 64rem) {
+    #contact > .content-left > a {
+      font-size: 1.5rem; } }
 
 /*# sourceMappingURL=index.css.map */

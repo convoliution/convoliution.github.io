@@ -42,6 +42,7 @@ main {
         p { margin: 0 auto; }
 
         > img {
+            background-color: $black; // temporary, so I can see the shape
             grid-column: 1 / 4;
             grid-row: 1 / 2;
             @include breakpoint(medium) {
