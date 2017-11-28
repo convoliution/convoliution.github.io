@@ -27,6 +27,7 @@
         }
 
         &#email { border-color: #9497CE; } // ProtonMail purple
+        &#twitter { border-color: #1DA1F2; } // Twitter blue
         &#linkedin { border-color: #0077B5; } // LinkedIn blue
         &#github { border-color: #181717; } // GitHub black
 
@@ -59,7 +60,10 @@
     // font settings
     > .content-left > a {
         font-family: 'LatoBold', sans-serif;
-        font-size: 1.2rem;
+        font-size: 1rem;
+        @include breakpoint(medium) {
+            font-size: 1.2rem;
+        }
         @include breakpoint(large) {
             font-size: 1.5rem;
         }

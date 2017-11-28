@@ -259,6 +259,8 @@ main {
     box-shadow: -1px 2px 4px 0 #8d8d8d; }
   #contact > .content-left > a#email {
     border-color: #9497CE; }
+  #contact > .content-left > a#twitter {
+    border-color: #1DA1F2; }
   #contact > .content-left > a#linkedin {
     border-color: #0077B5; }
   #contact > .content-left > a#github {
@@ -279,7 +281,10 @@ main {
     display: none; }
 #contact > .content-left > a {
   font-family: 'LatoBold', sans-serif;
-  font-size: 1.2rem; }
+  font-size: 1rem; }
+  @media only screen and (min-width: 40rem) {
+    #contact > .content-left > a {
+      font-size: 1.2rem; } }
   @media only screen and (min-width: 64rem) {
     #contact > .content-left > a {
       font-size: 1.5rem; } }
