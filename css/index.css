@@ -230,8 +230,6 @@ main {
   content: "::<T>"; }
 #about .code#python::after {
   content: "()"; }
-#about .code#javascript::after {
-  content: "+[]"; }
 #about .code#cpp::after {
   content: "->questionable_syntax_additions"; }
 #about .code#java::after {

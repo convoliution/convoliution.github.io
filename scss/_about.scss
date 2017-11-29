@@ -23,7 +23,6 @@
     .code {
         &#rust::after { content: "::<T>"; }
         &#python::after { content: "()"; }
-        &#javascript::after { content: "+[]"; }
         &#cpp::after { content: "->questionable_syntax_additions"; }
         &#java::after { content: ".excessivelyVerboseCoreAPI"; }
 
