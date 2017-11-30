@@ -13,9 +13,13 @@
 
         position: relative;
         height: $a-height;
-        width: 60%;
         border: $a-border solid;
         margin: 0 auto .6rem auto;
+
+        width: 80%;
+        @include breakpoint(small) {
+            width: 60%
+        }
 
         bottom: 0;
         box-shadow: none;
@@ -62,7 +66,7 @@
     > .content-left > a {
         font-family: 'LatoBold', sans-serif;
         font-size: 1rem;
-        @include breakpoint(medium) {
+        @include breakpoint(small) {
             font-size: 1.2rem;
         }
         @include breakpoint(large) {
