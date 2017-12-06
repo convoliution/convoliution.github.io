@@ -23,12 +23,12 @@
 
         bottom: 0;
         box-shadow: none;
-        background-color: $snow;
-        @include transition-multiple(bottom .2s ease, box-shadow .2s ease, background-color .2s ease);
+        color: $black;
+        @include transition-multiple(bottom .2s ease, box-shadow .2s ease, color .2s ease);
         &:hover {
             bottom: 2px;
             box-shadow: -1px 2px 4px 0 $dark-gray;
-            background-color: $white;
+            color: $dark-gray;
         }
 
         &#email { border-color: #9497CE; } // ProtonMail purple
@@ -48,7 +48,6 @@
         }
         > div {
             text-align: center;
-            color: $black;
 
             grid-column: 2 / 3;
             align-self: center;
