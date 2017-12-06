@@ -4,6 +4,10 @@
 @import 'flexbox';
 @import 'breakpoints';
 
+$logo:             3.00rem;
+$nav-button-large: 2.00rem;
+$nav-button-small: 1.75rem;
+
 #navbar {
     position: fixed; // independent of scrolling
     width: 100%;
