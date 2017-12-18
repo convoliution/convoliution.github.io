@@ -3,7 +3,7 @@
 @import 'breakpoints';
 
 #contact {
-    > .content-left > a {
+    > .content.left > a {
         $a-height: 3.6rem;
         $a-border: 2px;
 
@@ -62,7 +62,7 @@
     }
 
     // font settings
-    > .content-left > a {
+    > .content.left > a {
         font-family: 'LatoBold', sans-serif;
         font-size: 1rem;
         @include breakpoint(small) {

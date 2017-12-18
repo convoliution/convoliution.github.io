@@ -56,25 +56,25 @@ main {
             @include calc(min-height, '100vh - #{$navbar-height}');
         }
 
-        > img {
+        > .image {
             background-color: $black; // temporary, so I can see the shape
             grid-column: 1 / 4;
             grid-row: 1 / 2;
             @include breakpoint(medium) {
                 grid-row: 1 / 3;
             }
-        }
-        > img.image-left {
-            @include breakpoint(medium) {
-                grid-column: 1 / 2;
+            &.left {
+                @include breakpoint(medium) {
+                    grid-column: 1 / 2;
+                }
+            }
+            &.right {
+                @include breakpoint(medium) {
+                    grid-column: 3 / 4;
+                }
             }
         }
-        > img.image-right {
-            @include breakpoint(medium) {
-                grid-column: 3 / 4;
-            }
-        }
-        > div {
+        > .content {
             align-self: center;
             text-align: center;
             padding: 1rem;
@@ -84,15 +84,15 @@ main {
             @include breakpoint(medium) {
                 grid-row: 1 / 3;
             }
-        }
-        > div.content-left {
-            @include breakpoint(medium) {
-                grid-column: 1 / 3;
+            &.left {
+                @include breakpoint(medium) {
+                    grid-column: 1 / 3;
+                }
             }
-        }
-        > div.content-right {
-            @include breakpoint(medium) {
-                grid-column: 2 / 4;
+            &.right {
+                @include breakpoint(medium) {
+                    grid-column: 2 / 4;
+                }
             }
         }
     }
