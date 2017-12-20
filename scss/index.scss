@@ -57,20 +57,32 @@ main {
         }
 
         > .image {
-            background-color: $black; // temporary, so I can see the shape
+            overflow: hidden;
             grid-column: 1 / 4;
             grid-row: 1 / 2;
             @include breakpoint(medium) {
                 grid-row: 1 / 3;
             }
+            > img {
+                // image size in mobile??
+                @include breakpoint(medium) {
+                    @include calc(height, '100vh - #{$navbar-height}');
+                }
+            }
             &.left {
                 @include breakpoint(medium) {
                     grid-column: 1 / 2;
+                }
+                > img {
+                    float: left;
                 }
             }
             &.right {
                 @include breakpoint(medium) {
                     grid-column: 3 / 4;
+                }
+                > img {
+                    float: right;
                 }
             }
         }
