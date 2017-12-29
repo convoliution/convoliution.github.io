@@ -1,47 +1,14 @@
+@import 'defaults';
+
 @import 'sizes';
 @import 'colors';
 @import 'utils';
 @import 'breakpoints';
 
-// one of the few things IE does right
-html {
-    box-sizing: border-box;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
-p {
-    margin: 0; // why would it have a default margin, anyway?
-    margin-bottom: 1rem;
-    cursor: default;
-}
-
-a {
-    text-decoration: none; // no underline
-}
-
 main {
     padding-top: $navbar-height-compact;
     @include breakpoint(medium) {
         padding-top: $navbar-height;
-    }
-
-    .header {
-        margin-top: 0;
-        margin-bottom: 3.6rem;
-    }
-    p {
-        margin: 0 auto;
-
-        &.short {
-            text-align: left;
-            max-width: 24rem;
-        }
-        &.long {
-            text-align: left;
-            max-width: 40rem;
-        }
     }
 
     > section {
@@ -110,49 +77,8 @@ main {
     }
 }
 
-// font settings
 nav {
     font-family: 'LatoRegular', sans-serif;
-}
-main {
-    h1, h2, h3, h4, h5, h6 { font-family: 'LatoRegular', sans-serif; }
-    h1 { font-size: 3.3rem; font-weight: 800; }
-    h2 { font-size: 2.7rem; font-weight: 800; }
-    h3 { font-size: 2.4rem; font-weight: 700; }
-    h4 { font-size: 2.1rem; font-weight: 600; }
-    h5 { font-size: 1.8rem; font-weight: 500; }
-    h6 { font-size: 1.5rem; font-weight: 400; }
-
-    .header {
-        font-family: 'LatoRegular', sans-serif;
-        font-weight: 400;
-
-        .title {
-            font-size: 1.7rem;
-        }
-
-        .subtitle {
-            font-size: 1.6rem;
-        }
-    }
-
-    font-family: 'LatoLight', sans-serif;
-    font-size: 1.5rem; font-weight: 400;
-
-    p {
-        &.short {
-            font-size: .9rem;
-            line-height: 1.2;
-        }
-        &.long {
-            font-size: 1.2rem;
-            line-height: 1.5;
-        }
-    }
-
-    .code {
-        font-family: 'FiraMonoRegular', monospace;
-    }
 }
 
 @import 'navbar';
