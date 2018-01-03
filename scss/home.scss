@@ -18,6 +18,11 @@ main {
             @include calc(min-height, '100vh - #{$navbar-height}');
         }
 
+        .header {
+            margin-top: 0;
+            margin-bottom: 3.6rem;
+        }
+        
         > .image {
             overflow: hidden;
             grid-column: 1 / 4;
