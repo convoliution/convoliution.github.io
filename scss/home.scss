@@ -77,12 +77,8 @@ main {
     }
 }
 
-nav {
-    font-family: 'LatoRegular', sans-serif;
-}
-
-@import 'navbar';
-@import 'landing';
-@import 'about';
-@import 'projects';
-@import 'contact';
+@import 'home/navbar';
+@import 'home/landing';
+@import 'home/about';
+@import 'home/projects';
+@import 'home/contact';
