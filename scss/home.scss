@@ -6,11 +6,6 @@
 @import 'breakpoints';
 
 main {
-    padding-top: $navbar-height-compact;
-    @include breakpoint(medium) {
-        padding-top: $navbar-height;
-    }
-
     > section {
         width: 100%;
 
