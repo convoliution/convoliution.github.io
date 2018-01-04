@@ -1,12 +1,12 @@
 // navbar
 $(function() {
-    updateLogo(); // set Logo position on document ready
+    updateLogo('#landing'); // set Logo position on document ready
     updateUnderline(); // set Underline position on document ready
     $('#mi').css('opacity', 1);
     $('#liu').css('opacity', 1);
 
     $(window).scroll(function(){
-        updateLogo();
+        updateLogo('#landing');
         updateUnderline();
     });
 
@@ -20,21 +20,21 @@ $(function() {
     });
 
     $(window).resize(function() {
-        updateLogo();
+        updateLogo('#landing');
         updateUnderline();
     });
 
-    function updateLogo() {
+    function updateLogo(sectionID) {
         isCompactNavbar = $('#logo').css('align-items') === 'normal';
 
         if (isCompactNavbar) {
             var minLiuLeft = -$('#chael').outerWidth()/2;
             var maxMiLeft = $('#chael').outerWidth()/2;
-            var miLeft = maxMiLeft*$(window).scrollTop()/$('#landing').outerHeight();
+            var miLeft = maxMiLeft*$(window).scrollTop()/$(sectionID).outerHeight();
         } else {
             var minLiuLeft = -$('#chael').outerWidth();
         }
-        var liuLeft = minLiuLeft*$(window).scrollTop()/$('#landing').outerHeight(); // relate 'mi liu' distance to scroll distance
+        var liuLeft = minLiuLeft*$(window).scrollTop()/$(sectionID).outerHeight(); // relate 'mi liu' distance to scroll distance
 
         // #liu position and #chael opacity
         if (liuLeft >= 0) {
