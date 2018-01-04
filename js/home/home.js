@@ -1,7 +1,7 @@
 // navbar
 $(function() {
     var logoSection = '#landing';
-    
+
     navbar.initLogo();
 
     navbar.updateLogo(logoSection); // set Logo position on document ready
@@ -15,6 +15,15 @@ $(function() {
     $(window).resize(function() {
         navbar.updateLogo(logoSection);
         navbar.updateUnderline();
+    });
+
+    $('#logo').click(function(event) {
+        event.preventDefault();
+        var posCurrent = $(window).scrollTop();
+        var posTarget = $($(this).attr('href')).offset().top - $('nav').outerHeight();
+        $('html, body').animate({
+            scrollTop: posTarget
+        }, 250 + Math.abs(posTarget - posCurrent)/3);
     });
 });
 
