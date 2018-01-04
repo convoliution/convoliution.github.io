@@ -1,17 +1,19 @@
 // navbar
 $(function() {
+    var logoSection = '#landing';
+    
     navbar.initLogo();
 
-    navbar.updateLogo('#landing'); // set Logo position on document ready
+    navbar.updateLogo(logoSection); // set Logo position on document ready
     navbar.updateUnderline(); // set Underline position on document ready
 
     $(window).scroll(function(){
-        navbar.updateLogo('#landing');
+        navbar.updateLogo(logoSection);
         navbar.updateUnderline();
     });
 
     $(window).resize(function() {
-        navbar.updateLogo('#landing');
+        navbar.updateLogo(logoSection);
         navbar.updateUnderline();
     });
 });
