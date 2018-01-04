@@ -1,8 +1,8 @@
-@import '../sizes';
-@import '../colors';
-@import '../transitions';
-@import '../flexbox';
-@import '../breakpoints';
+@import '../sitewide/sizes';
+@import '../sitewide/colors';
+@import '../sitewide/transitions';
+@import '../sitewide/flexbox';
+@import '../sitewide/breakpoints';
 
 nav {
     > #logo {

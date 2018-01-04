@@ -1,9 +1,9 @@
-@import 'sitewide';
+@import '../sitewide/sitewide';
 
-@import 'sizes';
-@import 'colors';
-@import 'utils';
-@import 'breakpoints';
+@import '../sitewide/sizes';
+@import '../sitewide/colors';
+@import '../sitewide/calc';
+@import '../sitewide/breakpoints';
 
 main {
     > section {
@@ -77,8 +77,8 @@ main {
     }
 }
 
-@import 'home/navbar';
-@import 'home/landing';
-@import 'home/about';
-@import 'home/projects';
-@import 'home/contact';
+@import 'navbar';
+@import 'landing';
+@import 'about';
+@import 'projects';
+@import 'contact';
