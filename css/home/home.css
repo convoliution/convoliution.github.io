@@ -43,6 +43,55 @@ nav {
     transition: color 0.2s ease; }
     nav a:hover {
       color: #aeaeae; }
+  nav > #logo {
+    font-size: 3rem;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center; }
+    @media only screen and (min-width: 40rem) {
+      nav > #logo {
+        height: 100%;
+        display: -webkit-inline-flex;
+        display: inline-flex;
+        -webkit-align-items: center;
+        align-items: center; } }
+    nav > #logo > noscript {
+      position: absolute; }
+    nav > #logo > #mi, nav > #logo > #chael, nav > #logo > #liu {
+      position: relative;
+      opacity: 0; }
+    nav > #logo > #chael {
+      padding-right: .76rem; }
+  nav > #menu {
+    padding: 0;
+    margin: 0 -0.5rem;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-evenly;
+    justify-content: space-evenly; }
+    @media only screen and (min-width: 64rem) {
+      nav > #menu {
+        margin: 0 -1rem; } }
+    @media only screen and (min-width: 40rem) {
+      nav > #menu {
+        height: 100%;
+        display: -webkit-inline-flex;
+        display: inline-flex;
+        -webkit-align-items: center;
+        align-items: center; } }
+    nav > #menu > li {
+      display: inline-block;
+      list-style-type: none;
+      margin: 0 0.5rem; }
+      @media only screen and (min-width: 64rem) {
+        nav > #menu > li {
+          margin: 0 1rem; } }
+      nav > #menu > li > a {
+        font-size: 1.75rem; }
+        @media only screen and (min-width: 40rem) {
+          nav > #menu > li > a {
+            font-size: 2rem; } }
 
 main {
   padding-top: 6.5rem; }
@@ -155,55 +204,6 @@ main > section {
       main > section > .content.right {
         grid-column: 2 / 4; } }
 
-nav > #logo {
-  font-size: 3rem;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center; }
-  @media only screen and (min-width: 40rem) {
-    nav > #logo {
-      height: 100%;
-      display: -webkit-inline-flex;
-      display: inline-flex;
-      -webkit-align-items: center;
-      align-items: center; } }
-  nav > #logo > noscript {
-    position: absolute; }
-  nav > #logo > #mi, nav > #logo > #chael, nav > #logo > #liu {
-    position: relative;
-    opacity: 0; }
-  nav > #logo > #chael {
-    padding-right: .76rem; }
-nav > #menu {
-  padding: 0;
-  margin: 0 -0.5rem;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: space-evenly;
-  justify-content: space-evenly; }
-  @media only screen and (min-width: 64rem) {
-    nav > #menu {
-      margin: 0 -1rem; } }
-  @media only screen and (min-width: 40rem) {
-    nav > #menu {
-      height: 100%;
-      display: -webkit-inline-flex;
-      display: inline-flex;
-      -webkit-align-items: center;
-      align-items: center; } }
-  nav > #menu > li {
-    display: inline-block;
-    list-style-type: none;
-    margin: 0 0.5rem; }
-    @media only screen and (min-width: 64rem) {
-      nav > #menu > li {
-        margin: 0 1rem; } }
-    nav > #menu > li > a {
-      font-size: 1.75rem; }
-      @media only screen and (min-width: 40rem) {
-        nav > #menu > li > a {
-          font-size: 2rem; } }
 nav > #underline {
   position: absolute;
   bottom: .5rem;
