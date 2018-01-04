@@ -5,104 +5,70 @@
 @import '../breakpoints';
 
 nav {
-    position: fixed; // independent of scrolling
-    width: 100%;
+    > #logo {
+        font-size: $logo;
 
-    height: $navbar-height-compact;
-    @include breakpoint(medium) {
-        height: $navbar-height;
-        padding: 0 1rem;
         @include display-flex();
-        justify-content: space-between;
-    }
-    @include breakpoint(large) {
-        padding: 0 4rem;
-    }
-    border-bottom: .05rem solid $dark-gray;
-    background-color: $light-gray;
-    z-index: 1;
+        @include justify-content(center);
+        @include breakpoint(medium) {
+            height: 100%;
+            @include display-inline-flex();
+            @include align-items(center);
+        }
 
-    // prevent text highlighting
-    -webkit-touch-callout: none; // iOS Safari
-    -webkit-tap-highlight-color: rgba(0,0,0,0); // WebKit
-    -webkit-tap-highlight-color: transparent; // Android Chrome
-    -webkit-user-select: none; // Safari
-       -moz-user-select: none; // Firefox
-        -ms-user-select: none; // Microsoft Edge
-            user-select: none; // Chrome and Opera
+        > noscript {
+            position: absolute;
+        }
 
-    a {
-        color: $dark-gray;
-        @include transition-multiple(color .2s ease);
-        &:hover {
-            color: $gray;
+        > #mi, > #chael, > #liu {
+            position: relative;
+            opacity: 0; // hide logo during initial positioning while page loads
+        }
+
+        > #chael {
+            padding-right: .5rem;
         }
     }
-}
 
-#logo {
-    font-size: $logo;
+    > #menu {
+        $medium-spacing: .5rem;
+        $large-spacing: 1rem;
 
-    @include display-flex();
-    @include justify-content(center);
-    @include breakpoint(medium) {
-        height: 100%;
-        @include display-inline-flex();
-        @include align-items(center);
-    }
-
-    > noscript {
-        position: absolute;
-    }
-
-    > #mi, > #chael, > #liu {
-        position: relative;
-        opacity: 0; // hide logo during initial positioning while page loads
-    }
-
-    > #chael {
-        padding-right: .5rem;
-    }
-}
-
-#menu {
-    $medium-spacing: .5rem;
-    $large-spacing: 1rem;
-
-    padding: 0;
-    margin: 0 -#{$medium-spacing};
-    @include breakpoint(large) {
-        margin: 0 -#{$large-spacing};
-    }
-
-    @include display-flex();
-    @include justify-content(space-evenly);
-    @include breakpoint(medium) {
-        height: 100%;
-        @include display-inline-flex();
-        @include align-items(center);
-    }
-
-    > li {
-        display: inline-block;
-        list-style-type: none;
-        margin: 0 #{$medium-spacing};
+        padding: 0;
+        margin: 0 -#{$medium-spacing};
         @include breakpoint(large) {
-            margin: 0 #{$large-spacing};
+            margin: 0 -#{$large-spacing};
         }
 
-        > a {
-            font-size: $nav-button-small;
-            @include breakpoint(medium) {
-                font-size: $nav-button-large;
+        @include display-flex();
+        @include justify-content(space-evenly);
+        @include breakpoint(medium) {
+            height: 100%;
+            @include display-inline-flex();
+            @include align-items(center);
+        }
+
+        > li {
+            display: inline-block;
+            list-style-type: none;
+            margin: 0 #{$medium-spacing};
+            @include breakpoint(large) {
+                margin: 0 #{$large-spacing};
+            }
+
+            > a {
+                font-size: $nav-button-small;
+                @include breakpoint(medium) {
+                    font-size: $nav-button-large;
+                }
             }
         }
     }
-}
 
-#underline {
-    position: absolute;
-    bottom: .5rem;
-    height: .2rem;
-    background-color: $blue;
+    > #underline {
+        position: absolute;
+        bottom: .5rem;
+        height: .2rem;
+        background-color: $blue;
+    }
 }
