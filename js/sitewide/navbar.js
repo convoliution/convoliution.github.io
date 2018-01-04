@@ -1,30 +1,18 @@
-// navbar
-$(function() {
-    updateLogo('#landing'); // set Logo position on document ready
-    updateUnderline(); // set Underline position on document ready
-    $('#mi').css('opacity', 1);
-    $('#liu').css('opacity', 1);
+var navbar = {
+    initLogo: function() {
+        $('#mi').css('opacity', 1); // initial opacity was 0 while document was loading
+        $('#liu').css('opacity', 1); // initial opacity was 0 while document was loading
 
-    $(window).scroll(function(){
-        updateLogo('#landing');
-        updateUnderline();
-    });
-
-    $('nav a').click(function(event) {
-        event.preventDefault();
-        var posCurrent = $(window).scrollTop();
-        var posTarget = $($(this).attr('href')).offset().top - $('nav').outerHeight();
-        $('html, body').animate({
-            scrollTop: posTarget
-        }, 250 + Math.abs(posTarget - posCurrent)/3);
-    });
-
-    $(window).resize(function() {
-        updateLogo('#landing');
-        updateUnderline();
-    });
-
-    function updateLogo(sectionID) {
+        $('nav a').click(function(event) {
+            event.preventDefault();
+            var posCurrent = $(window).scrollTop();
+            var posTarget = $($(this).attr('href')).offset().top - $('nav').outerHeight();
+            $('html, body').animate({
+                scrollTop: posTarget
+            }, 250 + Math.abs(posTarget - posCurrent)/3);
+        });
+    },
+    updateLogo: function(sectionID) { // works with any page
         isCompactNavbar = $('#logo').css('align-items') === 'normal';
 
         if (isCompactNavbar) {
@@ -66,9 +54,8 @@ $(function() {
             $('#mi').css('left', 0); // reset in case of window resize
             $('#chael').css('left', 0); // reset in case of window resize
         }
-    }
-
-    function updateUnderline() {
+    },
+    updateUnderline: function() { // works only with home page
         var posCurrent = $(window).scrollTop();
 
         // store the top positions of each section
@@ -123,42 +110,4 @@ $(function() {
             }
         }
     }
-});
-
-// contact section
-$(function() {
-    // Obfuscate email address
-    $('#email').attr('href', "mailto:"+String.fromCharCode(((!+[]+[])[+[]]+(![]+[])[+!+[]]+(![]+[])[!+[]+!+[]]+(![]+[])[!+[]+!+[]]).charCodeAt(2)+1)+([![]]+[][[]])[+!+[]+[+[]]]+String.fromCharCode((([][[]]+[])[!+[]+!+[]]+(![]+[])[+!+[]]+(+[![]]+[+(+!+[]+(!+[]+[])[!+[]+!+[]+!+[]]+(+!+[])+(+[])+(+[])+(+[]))])[+!+[]+[+[]]]).charCodeAt(1)+2)+String.fromCharCode((([![]]+[][[]])[+!+[]+[+[]]]).charCodeAt(0)-1)+(![]+[])[+!+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(![]+[])[!+[]+!+[]]+String.fromCharCode((([][[]]+[])[+!+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!+[]+[])[+!+[]]+(+[![]]+[])[+[]]+(![]+[])[!+[]+!+[]+!+[]]+(!+[]+[])[+[]]).charCodeAt(3)-14)+String.fromCharCode(((![]+[])[!+[]+!+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(![]+[])[+!+[]]+([][[]]+[])[+!+[]]).charCodeAt(3)-1)+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+([![]]+[][[]])[+!+[]+[+[]]]+([][[]]+[])[+[]]+(+(+!+[]+[+!+[]]+(!![]+[])[!+[]+!+[]+!+[]]+[!+[]+!+[]]+[+[]])+[])[+!+[]]+String.fromCharCode(((![]+[])[!+[]+!+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(![]+[])[!+[]+!+[]+!+[]]+(![]+[])[!+[]+!+[]+!+[]]).charCodeAt(2)-6)+(!![]+[])[!+[]+!+[]+!+[]]);
-
-    // disable email link when user is trying to highlight address
-    function dist(loc1, loc2) {
-        return Math.sqrt(Math.pow(loc2.x - loc1.x, 2) + Math.pow(loc2.y - loc1.y, 2))
-    }
-    var dragDist = 75;
-    var isDrag = false;
-    var mouseStartLoc = {
-        'x': 0,
-        'y': 0
-    };
-    $('#email').mousedown(function(event) {
-        mouseStartLoc = {
-            'x': event.pageX,
-            'y': event.pageY
-        };
-    });
-    $('#email').mouseup(function(event) {
-        mouseEndLoc = {
-            'x': event.pageX,
-            'y': event.pageY
-        };
-        if (dist(mouseStartLoc, mouseEndLoc) >= dragDist) {
-            isDrag = true;
-        }
-    });
-    $('#email').click(function(event) {
-        if (isDrag) {
-            event.preventDefault();
-            isDrag = false;
-        }
-    });
-});
+}
