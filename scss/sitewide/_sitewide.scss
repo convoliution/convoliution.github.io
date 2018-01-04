@@ -55,6 +55,66 @@ nav {
             color: $gray;
         }
     }
+
+    > #logo {
+        font-size: $logo;
+
+        @include display-flex();
+        @include justify-content(center);
+        @include breakpoint(medium) {
+            height: 100%;
+            @include display-inline-flex();
+            @include align-items(center);
+        }
+
+        > noscript {
+            position: absolute;
+        }
+
+        > #mi, > #chael, > #liu {
+            position: relative;
+            opacity: 0; // hide logo during initial positioning while page loads
+        }
+
+        > #chael {
+            padding-right: .76rem; // width of a space character
+        }
+    }
+
+    > #menu {
+        $medium-spacing: .5rem;
+        $large-spacing: 1rem;
+
+        padding: 0;
+        margin: 0 -#{$medium-spacing};
+        @include breakpoint(large) {
+            margin: 0 -#{$large-spacing};
+        }
+
+        @include display-flex();
+        @include justify-content(space-evenly);
+        @include breakpoint(medium) {
+            height: 100%;
+            @include display-inline-flex();
+            @include align-items(center);
+        }
+
+        > li {
+            display: inline-block;
+            list-style-type: none;
+            margin: 0 #{$medium-spacing};
+            @include breakpoint(large) {
+                margin: 0 #{$large-spacing};
+            }
+
+            > a {
+                font-size: $nav-button-small;
+                @include breakpoint(medium) {
+                    font-size: $nav-button-large;
+                }
+            }
+        }
+    }
 }
 
 main {
