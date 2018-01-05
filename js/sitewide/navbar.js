@@ -6,7 +6,7 @@ var navbar = {
         $('#menu a').click(function(event) {
             event.preventDefault();
             var posCurrent = $(window).scrollTop();
-            var posTarget = $($(this).attr('href')).offset().top - $('nav').outerHeight();
+            var posTarget = $($(this).attr('href')).offset().top - $('#navbar').outerHeight();
             $('html, body').animate({
                 scrollTop: posTarget
             }, 250 + Math.abs(posTarget - posCurrent)/3);
@@ -60,9 +60,9 @@ var navbar = {
 
         // store the top positions of each section
         var secTops = {}
-        secTops["about"] = $('#about').position().top - $('nav').outerHeight();
-        secTops["projects"] = $('#projects').position().top - $('nav').outerHeight();
-        secTops["contact"] = $('#contact').position().top - $('nav').outerHeight();
+        secTops["about"] = $('#about').position().top - $('#navbar').outerHeight();
+        secTops["projects"] = $('#projects').position().top - $('#navbar').outerHeight();
+        secTops["contact"] = $('#contact').position().top - $('#navbar').outerHeight();
 
         // identify the previous and next sections
         if (posCurrent < secTops["about"]) {

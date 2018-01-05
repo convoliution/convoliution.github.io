@@ -21,7 +21,7 @@ a {
     text-decoration: none; // no underline
 }
 
-nav {
+#navbar {
     position: fixed; // independent of scrolling
     width: 100%;
 
@@ -139,7 +139,7 @@ main {
 }
 
 // font settings
-nav {
+#navbar {
     font-family: 'LatoRegular', sans-serif;
 }
 main {

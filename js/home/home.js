@@ -20,7 +20,7 @@ $(function() {
     $('#logo').click(function(event) {
         event.preventDefault();
         var posCurrent = $(window).scrollTop();
-        var posTarget = $($(this).attr('href')).offset().top - $('nav').outerHeight();
+        var posTarget = $($(this).attr('href')).offset().top - $('#navbar').outerHeight();
         $('html, body').animate({
             scrollTop: posTarget
         }, 250 + Math.abs(posTarget - posCurrent)/3);

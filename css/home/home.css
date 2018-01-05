@@ -11,7 +11,7 @@ p {
 a {
   text-decoration: none; }
 
-nav {
+#navbar {
   position: fixed;
   width: 100%;
   height: 6.5rem;
@@ -26,44 +26,44 @@ nav {
   -ms-user-select: none;
   user-select: none; }
   @media only screen and (min-width: 40rem) {
-    nav {
+    #navbar {
       height: 4.25rem;
       padding: 0 2rem;
       display: -webkit-flex;
       display: flex;
       justify-content: space-between; } }
   @media only screen and (min-width: 64rem) {
-    nav {
+    #navbar {
       padding: 0 6rem; } }
-  nav a {
+  #navbar a {
     color: #8d8d8d;
     -webkit-transition: color 0.2s ease;
     -moz-transition: color 0.2s ease;
     -o-transition: color 0.2s ease;
     transition: color 0.2s ease; }
-    nav a:hover {
+    #navbar a:hover {
       color: #aeaeae; }
-  nav > #logo {
+  #navbar > #logo {
     font-size: 3rem;
     display: -webkit-flex;
     display: flex;
     -webkit-justify-content: center;
     justify-content: center; }
     @media only screen and (min-width: 40rem) {
-      nav > #logo {
+      #navbar > #logo {
         height: 100%;
         display: -webkit-inline-flex;
         display: inline-flex;
         -webkit-align-items: center;
         align-items: center; } }
-    nav > #logo > noscript {
+    #navbar > #logo > noscript {
       position: absolute; }
-    nav > #logo > #mi, nav > #logo > #chael, nav > #logo > #liu {
+    #navbar > #logo > #mi, #navbar > #logo > #chael, #navbar > #logo > #liu {
       position: relative;
       opacity: 0; }
-    nav > #logo > #chael {
+    #navbar > #logo > #chael {
       padding-right: .76rem; }
-  nav > #menu {
+  #navbar > #menu {
     padding: 0;
     margin: 0 -0.5rem;
     display: -webkit-flex;
@@ -71,26 +71,26 @@ nav {
     -webkit-justify-content: space-evenly;
     justify-content: space-evenly; }
     @media only screen and (min-width: 64rem) {
-      nav > #menu {
+      #navbar > #menu {
         margin: 0 -1rem; } }
     @media only screen and (min-width: 40rem) {
-      nav > #menu {
+      #navbar > #menu {
         height: 100%;
         display: -webkit-inline-flex;
         display: inline-flex;
         -webkit-align-items: center;
         align-items: center; } }
-    nav > #menu > li {
+    #navbar > #menu > li {
       display: inline-block;
       list-style-type: none;
       margin: 0 0.5rem; }
       @media only screen and (min-width: 64rem) {
-        nav > #menu > li {
+        #navbar > #menu > li {
           margin: 0 1rem; } }
-      nav > #menu > li > a {
+      #navbar > #menu > li > a {
         font-size: 1.75rem; }
         @media only screen and (min-width: 40rem) {
-          nav > #menu > li > a {
+          #navbar > #menu > li > a {
             font-size: 2rem; } }
 
 main {
@@ -107,7 +107,7 @@ main {
       text-align: left;
       max-width: 40rem; }
 
-nav {
+#navbar {
   font-family: 'LatoRegular', sans-serif; }
 
 main {
@@ -204,7 +204,7 @@ main > section {
       main > section > .content.right {
         grid-column: 2 / 4; } }
 
-nav > #underline {
+#navbar > #underline {
   position: absolute;
   bottom: .5rem;
   height: .2rem;
