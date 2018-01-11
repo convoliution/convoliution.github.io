@@ -4,10 +4,6 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
-p {
-  margin: 0;
-  margin-bottom: 1rem; }
-
 a {
   text-decoration: none; }
 
@@ -99,7 +95,8 @@ main {
     main {
       padding-top: 4.25rem; } }
   main p {
-    margin: 0 auto; }
+    margin: 0 auto;
+    margin-bottom: 1rem; }
     main p.short {
       text-align: left;
       max-width: 24rem; }

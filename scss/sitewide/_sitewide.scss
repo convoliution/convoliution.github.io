@@ -12,11 +12,6 @@ html {
     box-sizing: inherit;
 }
 
-p {
-    margin: 0; // why would it have a default margin, anyway?
-    margin-bottom: 1rem;
-}
-
 a {
     text-decoration: none; // no underline
 }
@@ -126,6 +121,7 @@ main {
 
     p {
         margin: 0 auto;
+        margin-bottom: 1rem;
 
         &.short {
             text-align: left;
