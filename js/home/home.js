@@ -3,6 +3,7 @@ $(function() {
     var logoSection = '#landing';
 
     navbar.initNavbar();
+    navbar.enableNav();
 
     navbar.updateLogo(logoSection); // set Logo position on document ready
     navbar.updateUnderline(); // set Underline position on document ready
