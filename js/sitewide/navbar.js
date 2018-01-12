@@ -3,8 +3,8 @@ var navbar = {
         $('#mi').css('opacity', 1); // initial opacity was 0 while document was loading
         $('#liu').css('opacity', 1); // initial opacity was 0 while document was loading
     },
-    enableNav: function() {
-        $('nav a').click(function(event) {
+    enableNav: function(navID) {
+        $(navID + ' a').click(function(event) {
             event.preventDefault();
             var posCurrent = $(window).scrollTop();
             var posTarget = $($(this).attr('href')).offset().top - $('#navbar').outerHeight();

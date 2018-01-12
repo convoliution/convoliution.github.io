@@ -3,7 +3,8 @@ $(function() {
     var logoSection = '#table-of-contents';
 
     navbar.initNavbar();
-    navbar.enableNav();
+    navbar.enableNav('#menu');
+    navbar.enableNav('#table-of-contents');
 
     navbar.updateLogo(logoSection); // set Logo position on document ready
 
