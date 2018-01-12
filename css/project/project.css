@@ -97,8 +97,7 @@ main {
   main p {
     margin: 0 auto;
     margin-bottom: 1rem;
-    text-align: left;
-    max-width: 40rem; }
+    text-align: left; }
 
 #navbar {
   font-family: 'LatoRegular', sans-serif; }
@@ -142,9 +141,9 @@ main {
 
 main {
   margin: 0 auto;
-  max-width: -moz-calc(40rem + (2 * 1.5rem));
-  max-width: -webkit-calc(40rem + (2 * 1.5rem));
-  max-width: calc(40rem + (2 * 1.5rem));
+  max-width: -moz-calc(48rem + (2 * 1.5rem));
+  max-width: -webkit-calc(48rem + (2 * 1.5rem));
+  max-width: calc(48rem + (2 * 1.5rem));
   padding-left: 1.5rem;
   padding-right: 1.5rem; }
 

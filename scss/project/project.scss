@@ -8,7 +8,7 @@ main {
     $side-padding: 1.5rem;
 
     margin: 0 auto;
-    @include calc(max-width, '#{$medium} + (2 * #{$side-padding})');
+    @include calc(max-width, '48rem + (2 * #{$side-padding})');
 
     // can't use shorthand here because padding-top is defined
     // in _sitewide.scss to make room for the navbar
