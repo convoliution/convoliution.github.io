@@ -1,6 +1,4 @@
-$small:  27rem;
-$medium: 40rem;
-$large:  64rem;
+@import 'sizes';
 
 @mixin breakpoint($size) {
     @if $size == small {
