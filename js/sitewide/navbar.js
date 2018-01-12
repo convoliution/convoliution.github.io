@@ -1,5 +1,5 @@
 var navbar = {
-    initLogo: function() {
+    initNavbar: function() {
         $('#mi').css('opacity', 1); // initial opacity was 0 while document was loading
         $('#liu').css('opacity', 1); // initial opacity was 0 while document was loading
 
