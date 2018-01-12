@@ -122,12 +122,9 @@ main {
     p {
         margin: 0 auto;
         margin-bottom: 1rem;
-        text-align: left;
 
-        max-width: $small;
-        @include breakpoint(medium) {
-            max-width: $medium;
-        }
+        text-align: left;
+        max-width: $medium;
     }
 }
 
@@ -161,12 +158,8 @@ main {
     font-size: 1.5rem; font-weight: 400;
 
     p {
-        font-size: 1rem;
-        line-height: 1.3;
-        @include breakpoint(medium) {
-            font-size: 1.2rem;
-            line-height: 1.5;
-        }
+        font-size: 1.2rem;
+        line-height: 1.5;
     }
 
     .code {
