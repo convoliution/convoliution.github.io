@@ -18,11 +18,11 @@ var navbar = {
         if (isCompactNavbar) {
             var minLiuLeft = -$('#chael').outerWidth()/2;
             var maxMiLeft = $('#chael').outerWidth()/2;
-            var miLeft = maxMiLeft*$(window).scrollTop()/$(sectionID).outerHeight();
+            var miLeft = maxMiLeft*$(window).scrollTop()/($(sectionID).offset().top + $(sectionID).height() - $('#navbar').outerHeight());
         } else {
             var minLiuLeft = -$('#chael').outerWidth();
         }
-        var liuLeft = minLiuLeft*$(window).scrollTop()/$(sectionID).outerHeight(); // relate 'mi liu' distance to scroll distance
+        var liuLeft = minLiuLeft*$(window).scrollTop()/($(sectionID).offset().top + $(sectionID).height() - $('#navbar').outerHeight()); // relate 'mi liu' distance to scroll distance
 
         // #liu position and #chael opacity
         if (liuLeft >= 0) {
