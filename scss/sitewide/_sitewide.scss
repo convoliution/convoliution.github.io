@@ -125,11 +125,11 @@ main {
 
         &.short {
             text-align: left;
-            max-width: 24rem;
+            max-width: $small;
         }
         &.long {
             text-align: left;
-            max-width: 40rem;
+            max-width: $medium;
         }
     }
 }
