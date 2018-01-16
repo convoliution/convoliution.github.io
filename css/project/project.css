@@ -150,11 +150,19 @@ main {
   padding-right: 1.5rem; }
   main > h1 {
     margin-bottom: 0; }
-  main > section > img {
-    max-width: 100%; }
+  main > section > figure {
+    margin: 1rem 1.5rem; }
+    main > section > figure > img {
+      width: 100%; }
+    main > section > figure > figcaption {
+      text-align: justify; }
 
 main > h1 + time {
   font-family: 'LatoThinItalic', sans-serif;
   font-size: 1.2rem; }
+main > section > figure > figcaption {
+  font-family: 'LatoThin', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.2; }
 
 /*# sourceMappingURL=project.css.map */
