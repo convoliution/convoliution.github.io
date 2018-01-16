@@ -14,4 +14,16 @@ main {
     // in _sitewide.scss to make room for the navbar
     padding-left: $side-padding;
     padding-right: $side-padding;
+
+    > h1 {
+        margin-bottom: 0;
+    }
+}
+
+// font settings
+main {
+    > h1 + time {
+        font-family: 'LatoThinItalic', sans-serif;
+        font-size: 1.2rem;
+    }
 }

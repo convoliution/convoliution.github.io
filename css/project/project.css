@@ -148,5 +148,11 @@ main {
   max-width: calc(48rem + (2 * 1.5rem));
   padding-left: 1.5rem;
   padding-right: 1.5rem; }
+  main > h1 {
+    margin-bottom: 0; }
+
+main > h1 + time {
+  font-family: 'LatoThinItalic', sans-serif;
+  font-size: 1.2rem; }
 
 /*# sourceMappingURL=project.css.map */
