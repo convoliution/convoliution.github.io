@@ -150,6 +150,8 @@ main {
   padding-right: 1.5rem; }
   main > h1 {
     margin-bottom: 0; }
+  main > section > img {
+    max-width: 100%; }
 
 main > h1 + time {
   font-family: 'LatoThinItalic', sans-serif;

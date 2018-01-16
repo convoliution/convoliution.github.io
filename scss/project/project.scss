@@ -18,6 +18,12 @@ main {
     > h1 {
         margin-bottom: 0;
     }
+
+    > section {
+        > img {
+            max-width: 100%;
+        }
+    }
 }
 
 // font settings
