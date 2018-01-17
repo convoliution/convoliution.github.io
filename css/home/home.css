@@ -156,7 +156,7 @@ main > section {
       min-height: calc(100vh - 4.25rem); } }
   main > section .header {
     margin-top: 0;
-    margin-bottom: 3.6rem; }
+    margin-bottom: 2rem; }
   main > section > .image {
     overflow: hidden;
     grid-column: 1 / 4;
