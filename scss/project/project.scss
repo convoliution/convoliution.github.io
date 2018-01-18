@@ -19,6 +19,16 @@ main {
         margin-bottom: 0;
     }
 
+    > nav {
+        > h2 {
+            margin-bottom: .6rem;
+        }
+        > ol {
+            margin-top: 0;
+            padding-left: 3rem;
+        }
+    }
+
     > section {
         > figure {
             margin: 1rem 1.5rem;

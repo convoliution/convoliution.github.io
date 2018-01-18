@@ -151,6 +151,11 @@ main {
   padding-right: 1.5rem; }
   main > h1 {
     margin-bottom: 0; }
+  main > nav > h2 {
+    margin-bottom: .6rem; }
+  main > nav > ol {
+    margin-top: 0;
+    padding-left: 3rem; }
   main > section > figure {
     margin: 1rem 1.5rem; }
     main > section > figure > img {
