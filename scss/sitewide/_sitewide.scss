@@ -127,13 +127,13 @@ main {
     font-family: 'LatoRegular', sans-serif;
 
     > #logo {
-        font-size: $logo;
+        font-size: 3rem;
     }
 
     > #menu > li > a {
-        font-size: $nav-button-small;
+        font-size: 1.75rem;
         @include breakpoint(medium) {
-            font-size: $nav-button-large;
+            font-size: 2rem;
         }
     }
 }
