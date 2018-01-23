@@ -80,6 +80,12 @@ main {
                     grid-column: 2 / 4;
                 }
             }
+
+            > .header {
+                > .title {
+                    margin-bottom: .1rem;
+                }
+            }
         }
     }
 
