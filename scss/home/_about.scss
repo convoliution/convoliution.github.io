@@ -2,38 +2,11 @@
 @import '../sitewide/breakpoints';
 
 #about {
-    ol {
-        width: 75%;
-        @include breakpoint(large) {
-            width: 36rem;
-        }
-        margin-left: auto;
-        margin-right: auto;
-
-        list-style-type: none;
-        text-align: left;
-
-    }
-
     #rust {
-        font-size: 3.3rem;
-        margin-bottom: 2rem;
+        margin-top: -.3rem;
     }
 
-    .code {
-        &#rust::after { content: "::<T>"; }
-        &#python::after { content: "()"; }
-        &#cpp::after { content: "->questionable_syntax_additions"; }
-        &#java::after { content: ".excessivelyVerboseCoreAPI"; }
-
-        &::after {
-            position: absolute;
-            color: $medium-gray;
-
-            display: none;
-            @include breakpoint(large) {
-                display: inline-block;
-            }
-        }
-    }
+    // font settings
+    .code { font-size: 1.45rem; }
+    #rust { font-size: 3.3rem; }
 }

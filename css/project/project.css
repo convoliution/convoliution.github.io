@@ -129,13 +129,6 @@ main {
   main h6 {
     font-size: 1.2rem;
     font-weight: 400; }
-  main .header {
-    font-family: 'LatoRegular', sans-serif;
-    font-weight: 400; }
-    main .header .title {
-      font-size: 1.7rem; }
-    main .header .subtitle {
-      font-size: 1.5rem; }
   main p {
     font-size: 1.2rem;
     line-height: 1.5; }

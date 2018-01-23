@@ -129,13 +129,6 @@ main {
   main h6 {
     font-size: 1.2rem;
     font-weight: 400; }
-  main .header {
-    font-family: 'LatoRegular', sans-serif;
-    font-weight: 400; }
-    main .header .title {
-      font-size: 1.7rem; }
-    main .header .subtitle {
-      font-size: 1.5rem; }
   main p {
     font-size: 1.2rem;
     line-height: 1.5; }
@@ -201,8 +194,17 @@ main > section {
     @media only screen and (min-width: 40rem) {
       main > section > .content.right {
         grid-column: 2 / 4; } }
+    main > section > .content > .header > .title {
+      margin-bottom: .1rem; }
 main p {
   max-width: 40rem; }
+main .header {
+  font-family: 'LatoRegular', sans-serif;
+  font-weight: 400; }
+  main .header .title {
+    font-size: 1.7rem; }
+  main .header .subtitle {
+    font-size: 1.5rem; }
 
 #landing > .image {
   background-image: url("../../images/me/landing.jpg"); }
@@ -233,33 +235,12 @@ main p {
   transform: rotate(12deg) translateX(-0.4rem) translateY(1.3rem);
   color: #8d8d8d; }
 
-#about ol {
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-  list-style-type: none;
-  text-align: left; }
-  @media only screen and (min-width: 64rem) {
-    #about ol {
-      width: 36rem; } }
 #about #rust {
-  font-size: 3.3rem;
-  margin-bottom: 2rem; }
-#about .code#rust::after {
-  content: "::<T>"; }
-#about .code#python::after {
-  content: "()"; }
-#about .code#cpp::after {
-  content: "->questionable_syntax_additions"; }
-#about .code#java::after {
-  content: ".excessivelyVerboseCoreAPI"; }
-#about .code::after {
-  position: absolute;
-  color: #e8e8e8;
-  display: none; }
-  @media only screen and (min-width: 64rem) {
-    #about .code::after {
-      display: inline-block; } }
+  margin-top: -.3rem; }
+#about .code {
+  font-size: 1.45rem; }
+#about #rust {
+  font-size: 3.3rem; }
 
 #contact > .content.left > a {
   display: grid;
