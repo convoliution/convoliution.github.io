@@ -9,7 +9,6 @@
 
         display: grid;
         grid-template-columns: $a-height auto;
-        grid-column-gap: -$a-border;
 
         position: relative;
         height: $a-height;

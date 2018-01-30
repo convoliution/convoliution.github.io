@@ -245,7 +245,6 @@ main .header {
 #contact > .content.left > a {
   display: grid;
   grid-template-columns: 3.6rem auto;
-  grid-column-gap: -2px;
   position: relative;
   height: 3.6rem;
   border: 2px solid;
