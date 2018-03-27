@@ -133,7 +133,7 @@ main {
     font-size: 1.2rem;
     line-height: 1.5; }
   main .code {
-    font-family: 'FiraMonoRegular', monospace; }
+    font-family: 'Oxygen Mono', monospace; }
 
 main > section {
   width: 100%;
