@@ -124,7 +124,7 @@ main {
 
 // font settings
 #navbar {
-    font-family: 'LatoRegular', sans-serif;
+    font-family: 'Oxygen', sans-serif;
 
     > #logo {
         font-size: 3rem;
@@ -138,7 +138,7 @@ main {
     }
 }
 main {
-    h1, h2, h3, h4, h5, h6 { font-family: 'LatoRegular', sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Oxygen', sans-serif; }
     h1 { font-size: 3.3rem; font-weight: 700; }
     h2 { font-size: 2.4rem; font-weight: 500; }
     h3 { font-size: 2.1rem; font-weight: 500; }
@@ -146,8 +146,8 @@ main {
     h5 { font-size: 1.5rem; font-weight: 450; }
     h6 { font-size: 1.2rem; font-weight: 400; }
 
-    font-family: 'LatoLight', sans-serif;
-    font-size: 1.5rem; font-weight: 400;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 1.5rem; font-weight: 300;
 
     p {
         font-size: 1.2rem;

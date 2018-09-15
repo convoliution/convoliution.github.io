@@ -68,8 +68,8 @@
 
     // font settings
     > .content.left > a {
-        font-family: 'LatoBold', sans-serif;
-        font-size: 1rem;
+        font-family: 'Oxygen', sans-serif;
+        font-size: 1rem; font-weight: 700;
         @include breakpoint(small) {
             font-size: 1.2rem;
         }

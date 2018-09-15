@@ -46,14 +46,15 @@ main {
 // font settings
 main {
     > h1 + time {
-        font-family: 'LatoThinItalic', sans-serif;
-        font-size: 1.2rem;
+        font-family: 'Oxygen', sans-serif;
+        font-style: italic;
+        font-size: 1.2rem; font-weight: 300;
     }
     > section {
         > figure {
             > figcaption {
-                font-family: 'LatoThin', sans-serif;
-                font-size: 1.1rem;
+                font-family: 'Oxygen', sans-serif;
+                font-size: 1.1rem; font-weight: 300;
                 line-height: 1.2;
             }
         }
