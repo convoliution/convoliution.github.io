@@ -1,22 +1,16 @@
 // navbar
 $(function() {
-    var logoSection = '#landing';
+    var updateNavbar = () => {
+        navbar.updateLogo('#landing');
+        navbar.updateUnderline();
+    };
 
     navbar.initNavbar();
     navbar.enableNav('#navbar');
 
-    navbar.updateLogo(logoSection); // set Logo position on document ready
-    navbar.updateUnderline(); // set Underline position on document ready
-
-    $(window).scroll(function(){
-        navbar.updateLogo(logoSection);
-        navbar.updateUnderline();
-    });
-
-    $(window).resize(function() {
-        navbar.updateLogo(logoSection);
-        navbar.updateUnderline();
-    });
+    updateNavbar();
+    $(window).scroll(updateNavbar);
+    $(window).resize(updateNavbar);
 });
 
 // contact section

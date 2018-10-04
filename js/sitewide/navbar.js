@@ -1,9 +1,9 @@
 var navbar = {
-    initNavbar: function() {
+    initNavbar: () => {
         $('#mi').css('opacity', 1); // initial opacity was 0 while document was loading
         $('#liu').css('opacity', 1); // initial opacity was 0 while document was loading
     },
-    enableNav: function(navID) {
+    enableNav: navID => {
         $(navID + ' a').click(function(event) {
             event.preventDefault();
             var posCurrent = $(window).scrollTop();
@@ -13,7 +13,7 @@ var navbar = {
             }, 250 + Math.abs(posTarget - posCurrent)/3);
         });
     },
-    updateLogo: function(sectionID) { // works with any page
+    updateLogo: sectionID => { // works with any page
         isCompactNavbar = $('#logo').css('align-items') === 'normal';
 
         if (isCompactNavbar) {
@@ -56,7 +56,7 @@ var navbar = {
             $('#chael').css('left', 0); // reset in case of window resize
         }
     },
-    updateUnderline: function() { // works only with home page
+    updateUnderline: () => { // works only with home page
         var posCurrent = $(window).scrollTop();
 
         // store the top positions of each section

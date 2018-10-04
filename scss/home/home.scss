@@ -7,16 +7,18 @@
 
 main {
     > section {
-        width: 100%;
+        position: relative;
+        overflow: hidden;
 
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 5fr;
-
+        width: 100vw;
         @include calc(min-height, '100vh - #{$navbar-height-compact}');
         @include breakpoint(medium) {
             @include calc(min-height, '100vh - #{$navbar-height}');
         }
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 5fr;
 
         .header {
             margin-top: 0;
@@ -24,6 +26,8 @@ main {
         }
 
         > .image {
+            z-index: 0;
+
             // grid settings
             grid-column: 1 / 4;
             grid-row: 1 / 2;
@@ -61,6 +65,8 @@ main {
             }
         }
         > .content {
+            z-index: 2;
+
             align-self: center;
             text-align: center;
             padding: 1rem;
