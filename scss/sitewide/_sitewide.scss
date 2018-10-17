@@ -116,7 +116,9 @@ main {
 
     p {
         margin: 0 auto;
-        margin-bottom: 1rem;
+        + p {
+            text-indent: 1em;
+        }
 
         text-align: left;
     }
