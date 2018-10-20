@@ -48,18 +48,19 @@ main {
             background-repeat: no-repeat;
             background-size: 200% auto;
             @include breakpoint(medium) {
-                background-size: auto 100%;
+                background-size: auto calc(100% - #{$navbar-height});
+                background-attachment: fixed;
             }
             &.left {
                 background-position: 20% 22%;
                 @include breakpoint(medium) {
-                    background-position: left;
+                    background-position: left #{$navbar-height};
                 }
             }
             &.right {
                 background-position: 80% 22%;
                 @include breakpoint(medium) {
-                    background-position: right;
+                    background-position: right #{$navbar-height};
                 }
             }
         }

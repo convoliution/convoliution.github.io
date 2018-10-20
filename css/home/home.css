@@ -224,7 +224,8 @@ main > section > .image {
 }
 @media only screen and (min-width: 40rem) {
   main > section > .image {
-    background-size: auto 100%;
+    background-size: auto calc(100% - 4.25rem);
+    background-attachment: fixed;
   }
 }
 main > section > .image.left {
@@ -232,7 +233,7 @@ main > section > .image.left {
 }
 @media only screen and (min-width: 40rem) {
   main > section > .image.left {
-    background-position: left;
+    background-position: left 4.25rem;
   }
 }
 main > section > .image.right {
@@ -240,7 +241,7 @@ main > section > .image.right {
 }
 @media only screen and (min-width: 40rem) {
   main > section > .image.right {
-    background-position: right;
+    background-position: right 4.25rem;
   }
 }
 main > section > .content {
