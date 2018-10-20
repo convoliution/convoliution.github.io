@@ -2,7 +2,6 @@
 
 @import '../sitewide/sizes';
 @import '../sitewide/colors';
-@import '../sitewide/calc';
 @import '../sitewide/breakpoints';
 
 main {
@@ -11,9 +10,9 @@ main {
         overflow: hidden;
 
         width: 100vw;
-        @include calc(min-height, '100vh - #{$navbar-height-compact}');
+        min-height: calc(100vh - #{$navbar-height-compact});
         @include breakpoint(medium) {
-            @include calc(min-height, '100vh - #{$navbar-height}');
+            min-height: calc(100vh - #{$navbar-height});
         }
 
         display: grid;

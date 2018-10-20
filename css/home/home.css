@@ -185,8 +185,6 @@ main > section {
   position: relative;
   overflow: hidden;
   width: 100vw;
-  min-height: -moz-calc(100vh - 6.5rem);
-  min-height: -webkit-calc(100vh - 6.5rem);
   min-height: calc(100vh - 6.5rem);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -194,8 +192,6 @@ main > section {
 }
 @media only screen and (min-width: 40rem) {
   main > section {
-    min-height: -moz-calc(100vh - 4.25rem);
-    min-height: -webkit-calc(100vh - 4.25rem);
     min-height: calc(100vh - 4.25rem);
   }
 }

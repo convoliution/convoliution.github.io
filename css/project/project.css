@@ -183,8 +183,6 @@ main .code {
 
 main {
   margin: 0 auto;
-  max-width: -moz-calc(48rem + (2 * 1.5rem));
-  max-width: -webkit-calc(48rem + (2 * 1.5rem));
   max-width: calc(48rem + (2 * 1.5rem));
   padding-left: 1.5rem;
   padding-right: 1.5rem;
