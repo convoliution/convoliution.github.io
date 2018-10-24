@@ -19,11 +19,6 @@ main {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 5fr;
 
-        .header {
-            margin-top: 0;
-            margin-bottom: 2rem;
-        }
-
         > .image {
             z-index: 0;
 
@@ -68,8 +63,7 @@ main {
             z-index: 2;
 
             align-self: center;
-            text-align: center;
-            padding: 1rem;
+            padding: 2rem;
 
             grid-column: 1 / 4;
             grid-row: 2 / 3;
@@ -87,16 +81,18 @@ main {
                 }
             }
 
+            > .header, > p {
+                max-width: $medium;
+            }
+
             > .header {
+                margin: 0 auto 2rem auto;
+
                 > .title {
-                    margin-bottom: .1rem;
+                    margin-bottom: .2rem;
                 }
             }
         }
-    }
-
-    p {
-        max-width: $medium;
     }
 
     // font settings

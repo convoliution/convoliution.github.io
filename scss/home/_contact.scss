@@ -3,71 +3,76 @@
 @import '../sitewide/breakpoints';
 
 #contact {
-    > .content.left > a {
-        $a-height: 3.6rem;
-        $a-border: 2px;
-
-        display: grid;
-        grid-template-columns: $a-height auto;
-
-        position: relative;
-        height: $a-height;
-        border: $a-border solid;
-        margin: 0 auto .6rem auto;
-
-        width: 80%;
-        @include breakpoint(small) {
-            width: 60%
+    > .content {
+        > .header { max-width: unset; }
+        > .header, a {
+            width: 80%;
+            @include breakpoint(small) {
+                width: 60%
+            }
         }
 
-        color: $black;
+        > a {
+            $a-height: 3.6rem;
+            $a-border: 2px;
 
-        bottom: 0;
-        box-shadow: none;
-        @include transition-multiple(bottom .2s ease, box-shadow .2s ease);
-        &:hover {
-            bottom: 2px;
-            box-shadow: -1px 2px 4px 0 $dark-gray;
-        }
-        &:active {
+            display: grid;
+            grid-template-columns: $a-height auto;
+
+            position: relative;
+            height: $a-height;
+            border: $a-border solid;
+            margin: 0 auto .6rem auto;
+
+            color: $black;
+
             bottom: 0;
             box-shadow: none;
-            background-color: $light-gray;
-            @include transition-multiple(bottom .1s ease, box-shadow .1s ease, background-color .1s ease);
-        }
+            @include transition-multiple(bottom .2s ease, box-shadow .2s ease);
+            &:hover {
+                bottom: 2px;
+                box-shadow: -1px 2px 4px 0 $dark-gray;
+            }
+            &:active {
+                bottom: 0;
+                box-shadow: none;
+                background-color: $light-gray;
+                @include transition-multiple(bottom .1s ease, box-shadow .1s ease, background-color .1s ease);
+            }
 
-        &#email { border-color: #9497CE; } // ProtonMail purple
-        &#twitter { border-color: #1DA1F2; } // Twitter blue
-        &#linkedin { border-color: #0077B5; } // LinkedIn blue
-        &#github { border-color: #181717; } // GitHub black
+            &#email    { border-color: #9497CE; } // ProtonMail purple
+            &#twitter  { border-color: #1DA1F2; } // Twitter blue
+            &#linkedin { border-color: #0077B5; } // LinkedIn blue
+            &#github   { border-color: #181717; } // GitHub black
 
-        > img {
-            $img-size: 2rem;
+            > img {
+                $img-size: 2rem;
 
-            height: $img-size;
-            width: $img-size;
+                height: $img-size;
+                width: $img-size;
 
-            grid-column: 1 / 2;
-            align-self: center;
-            justify-self: center;
-        }
-        > div {
-            text-align: center;
+                grid-column: 1 / 2;
+                align-self: center;
+                justify-self: center;
+            }
+            > div {
+                text-align: center;
 
-            grid-column: 2 / 3;
-            align-self: center;
-            justify-self: center;
-        }
+                grid-column: 2 / 3;
+                align-self: center;
+                justify-self: center;
+            }
 
-        &#email {
-            > div > span {
-                display: none;
+            &#email {
+                > div > span {
+                    display: none;
+                }
             }
         }
     }
 
     // font settings
-    > .content.left > a {
+    > .content > a {
         font-family: 'Oxygen', sans-serif;
         font-size: 1rem; font-weight: 700;
         @include breakpoint(small) {
