@@ -10,6 +10,19 @@ a {
   text-decoration: none;
 }
 
+p > a:link {
+  color: #006eb6;
+}
+p > a:visited {
+  color: #006eb6;
+}
+p > a:hover {
+  text-decoration: underline;
+}
+p > a:active {
+  color: #66b3ff;
+}
+
 #navbar {
   position: fixed;
   width: 100%;

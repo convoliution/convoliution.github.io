@@ -12,8 +12,12 @@ html {
     box-sizing: inherit;
 }
 
-a {
-    text-decoration: none; // no underline
+a { text-decoration: none; }
+p > a {
+    &:link    { color: $dark-blue; }
+    &:visited { color: $dark-blue; }
+    &:hover   { text-decoration: underline; }
+    &:active  { color: $blue; }
 }
 
 #navbar {
