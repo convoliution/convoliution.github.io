@@ -279,7 +279,7 @@ main > section > .content > .header, main > section > .content > p {
   max-width: 40rem;
 }
 main > section > .content > .header {
-  margin: 0 auto 2rem auto;
+  margin: 0 auto 1.2rem auto;
 }
 main > section > .content > .header > .title {
   margin-bottom: 0.2rem;
