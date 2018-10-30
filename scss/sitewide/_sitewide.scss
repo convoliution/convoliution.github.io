@@ -34,8 +34,8 @@ p > a {
     @include breakpoint(large) {
         padding: 0 6rem;
     }
-    border-bottom: .05rem solid $dark-gray;
-    background-color: $light-gray;
+    border-bottom: .05rem solid $gray;
+    background-color: $white;
     z-index: 12;
 
     // prevent text highlighting
