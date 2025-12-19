@@ -1,4 +1,4 @@
-@mixin breakpoint($device) {
+@mixin for-device($device) {
     @if $device == mobile {
         @media only screen and (min-width: 0rem) { @content; }
     }

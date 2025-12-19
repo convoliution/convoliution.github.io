@@ -1,8 +1,8 @@
-@import 'sitewide/sitewide';
+@use 'sitewide';
 
-@import 'sitewide/breakpoints';
-@import 'sitewide/colors';
-@import 'sitewide/fonts';
+@use 'breakpoint';
+@use 'color';
+@use 'font';
 
 body {
     height: 600vh;
@@ -18,15 +18,15 @@ main {
     align-items: center;
     justify-content: center;
 
-    background: $black;
+    background: color.$black;
 }
 
 .word {
     position: fixed;
 
-    @include breakpoint(mobile)  { font-size: 2rem; }
-    @include breakpoint(tablet)  { font-size: 4rem; }
-    @include breakpoint(desktop) { font-size: 5rem; }
+    @include breakpoint.for-device(mobile)  { font-size: 2rem; }
+    @include breakpoint.for-device(tablet)  { font-size: 4rem; }
+    @include breakpoint.for-device(desktop) { font-size: 5rem; }
 
     letter-spacing: 0.1rem;
 }
@@ -36,16 +36,16 @@ main {
 
     display: inline-block;
 
-    color: $white;
+    color: color.$white;
 }
 
 .letter::before {
     position: absolute;
     top: 0;
     left: 0;
-    
-    color: $blue;
-    
+
+    color: color.$blue;
+
     content: attr(data-letter);
     clip-path: var(--before-clip, inset(0 100% 0 0));
 }
@@ -54,6 +54,6 @@ main {
     position: absolute;
     z-index: 999;
 
-    color: $dark-blue;
+    color: color.$dark-blue;
     opacity: 0;
 }

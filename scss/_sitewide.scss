@@ -1,14 +1,14 @@
-@import 'colors';
+@use 'color';
 
 html                 { box-sizing: border-box; }
 *, *:before, *:after { box-sizing: inherit; }
 
 a { text-decoration: none; }
 p > a {
-    &:link    { color: $dark-blue; }
-    &:visited { color: $dark-blue; }
+    &:link    { color: color.$dark-blue; }
+    &:visited { color: color.$dark-blue; }
     &:hover   { text-decoration: underline; }
-    &:active  { color: $blue; }
+    &:active  { color: color.$blue; }
 }
 
 main {
