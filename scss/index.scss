@@ -5,7 +5,7 @@
 @use 'font';
 
 body {
-    height: 600vh;
+    height: 480vh;
 }
 
 main {
@@ -28,16 +28,18 @@ main {
     @include breakpoint.for-device(tablet)  { font-size: 4rem; }
     @include breakpoint.for-device(desktop) { font-size: 5rem; }
 
+    > span {
+        // width of a space, apparently
+        @include breakpoint.for-device(mobile)  { padding: .33rem; }
+        @include breakpoint.for-device(tablet)  { padding: .605rem; }
+        @include breakpoint.for-device(desktop) { padding: .745rem; }
+    }
+
     letter-spacing: 0.1rem;
 }
 
 .letter {
     position: relative;
-
-    // width of a space, apparently
-    @include breakpoint.for-device(mobile)  { padding: .33rem; }
-    @include breakpoint.for-device(tablet)  { padding: .605rem; }
-    @include breakpoint.for-device(desktop) { padding: .745rem; }
 
     display: inline-block;
 
@@ -60,5 +62,5 @@ main {
     z-index: 999;
 
     color: color.$dark-blue;
-    opacity: 0;
+    // opacity: 0;
 }

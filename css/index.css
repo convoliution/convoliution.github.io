@@ -95,7 +95,7 @@ main p {
   font-display: swap;
 }
 body {
-  height: 600vh;
+  height: 480vh;
 }
 
 main {
@@ -126,29 +126,27 @@ main {
     font-size: 5rem;
   }
 }
+@media only screen and (min-width: 0rem) {
+  #word > span {
+    padding: 0.33rem;
+  }
+}
+@media only screen and (min-width: 48rem) {
+  #word > span {
+    padding: 0.605rem;
+  }
+}
+@media only screen and (min-width: 64rem) {
+  #word > span {
+    padding: 0.745rem;
+  }
+}
 #word {
   letter-spacing: 0.1rem;
 }
 
 .letter {
   position: relative;
-}
-@media only screen and (min-width: 0rem) {
-  .letter {
-    padding: 0.33rem;
-  }
-}
-@media only screen and (min-width: 48rem) {
-  .letter {
-    padding: 0.605rem;
-  }
-}
-@media only screen and (min-width: 64rem) {
-  .letter {
-    padding: 0.745rem;
-  }
-}
-.letter {
   display: inline-block;
   color: #FEFEFE;
 }
@@ -166,7 +164,6 @@ main {
   position: absolute;
   z-index: 999;
   color: #006eb6;
-  opacity: 0;
 }
 
 /*# sourceMappingURL=index.css.map */
