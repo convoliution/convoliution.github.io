@@ -108,30 +108,47 @@ main {
   background: #242424;
 }
 
-.word {
+#word {
   position: fixed;
 }
 @media only screen and (min-width: 0rem) {
-  .word {
+  #word {
     font-size: 2rem;
   }
 }
 @media only screen and (min-width: 48rem) {
-  .word {
+  #word {
     font-size: 4rem;
   }
 }
 @media only screen and (min-width: 64rem) {
-  .word {
+  #word {
     font-size: 5rem;
   }
 }
-.word {
+#word {
   letter-spacing: 0.1rem;
 }
 
 .letter {
   position: relative;
+}
+@media only screen and (min-width: 0rem) {
+  .letter {
+    padding: 0.33rem;
+  }
+}
+@media only screen and (min-width: 48rem) {
+  .letter {
+    padding: 0.605rem;
+  }
+}
+@media only screen and (min-width: 64rem) {
+  .letter {
+    padding: 0.745rem;
+  }
+}
+.letter {
   display: inline-block;
   color: #FEFEFE;
 }

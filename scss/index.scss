@@ -21,7 +21,7 @@ main {
     background: color.$black;
 }
 
-.word {
+#word {
     position: fixed;
 
     @include breakpoint.for-device(mobile)  { font-size: 2rem; }
@@ -33,6 +33,11 @@ main {
 
 .letter {
     position: relative;
+
+    // width of a space, apparently
+    @include breakpoint.for-device(mobile)  { padding: .33rem; }
+    @include breakpoint.for-device(tablet)  { padding: .605rem; }
+    @include breakpoint.for-device(desktop) { padding: .745rem; }
 
     display: inline-block;
 
