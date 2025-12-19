@@ -1,0 +1,59 @@
+@import 'sitewide/sitewide';
+
+@import 'sitewide/breakpoints';
+@import 'sitewide/colors';
+@import 'sitewide/fonts';
+
+body {
+    height: 600vh;
+}
+
+main {
+    position: fixed;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: $black;
+}
+
+.word {
+    position: fixed;
+
+    @include breakpoint(mobile)  { font-size: 2rem; }
+    @include breakpoint(tablet)  { font-size: 4rem; }
+    @include breakpoint(desktop) { font-size: 5rem; }
+
+    letter-spacing: 0.1rem;
+}
+
+.letter {
+    position: relative;
+
+    display: inline-block;
+
+    color: $white;
+}
+
+.letter::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    color: $blue;
+    
+    content: attr(data-letter);
+    clip-path: var(--before-clip, inset(0 100% 0 0));
+}
+
+#i {
+    position: absolute;
+    z-index: 999;
+
+    color: $dark-blue;
+    opacity: 0;
+}

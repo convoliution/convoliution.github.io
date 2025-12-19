@@ -1,0 +1,46 @@
+@import 'colors';
+
+html                 { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+a { text-decoration: none; }
+p > a {
+    &:link    { color: $dark-blue; }
+    &:visited { color: $dark-blue; }
+    &:hover   { text-decoration: underline; }
+    &:active  { color: $blue; }
+}
+
+main {
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        margin: 0 auto;
+        + p {
+            text-indent: 1em;
+        }
+
+        text-align: left;
+    }
+}
+
+// font settings
+main {
+    h1, h2, h3, h4, h5, h6 { font-family: 'Oxygen', sans-serif; }
+    h1 { font-size: 3.3rem; font-weight: 700; }
+    h2 { font-size: 2.4rem; font-weight: 500; }
+    h3 { font-size: 2.1rem; font-weight: 500; }
+    h4 { font-size: 1.8rem; font-weight: 450; }
+    h5 { font-size: 1.5rem; font-weight: 450; }
+    h6 { font-size: 1.2rem; font-weight: 400; }
+
+    font-family: 'Oxygen', sans-serif;
+    font-size: 1.5rem; font-weight: 300;
+
+    p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+}

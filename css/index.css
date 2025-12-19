@@ -1,0 +1,155 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+p > a:link {
+  color: #006eb6;
+}
+p > a:visited {
+  color: #006eb6;
+}
+p > a:hover {
+  text-decoration: underline;
+}
+p > a:active {
+  color: #66b3ff;
+}
+
+main h1, main h2, main h3, main h4, main h5, main h6 {
+  margin-bottom: 1.5rem;
+}
+main p {
+  margin: 0 auto;
+}
+main p + p {
+  text-indent: 1em;
+}
+main p {
+  text-align: left;
+}
+
+main h1, main h2, main h3, main h4, main h5, main h6 {
+  font-family: "Oxygen", sans-serif;
+}
+main h1 {
+  font-size: 3.3rem;
+  font-weight: 700;
+}
+main h2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+main h3 {
+  font-size: 2.1rem;
+  font-weight: 500;
+}
+main h4 {
+  font-size: 1.8rem;
+  font-weight: 450;
+}
+main h5 {
+  font-size: 1.5rem;
+  font-weight: 450;
+}
+main h6 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+main {
+  font-family: "Oxygen", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+main p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+@font-face {
+  font-family: "Oxygen";
+  src: url("/fonts/Oxygen/Oxygen-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oxygen";
+  src: url("/fonts/Oxygen/Oxygen-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oxygen";
+  src: url("/fonts/Oxygen/Oxygen-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  height: 600vh;
+}
+
+main {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #242424;
+}
+
+.word {
+  position: fixed;
+}
+@media only screen and (min-width: 0rem) {
+  .word {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 48rem) {
+  .word {
+    font-size: 4rem;
+  }
+}
+@media only screen and (min-width: 64rem) {
+  .word {
+    font-size: 5rem;
+  }
+}
+.word {
+  letter-spacing: 0.1rem;
+}
+
+.letter {
+  position: relative;
+  display: inline-block;
+  color: #FEFEFE;
+}
+
+.letter::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #66b3ff;
+  content: attr(data-letter);
+  clip-path: var(--before-clip, inset(0 100% 0 0));
+}
+
+#i {
+  position: absolute;
+  z-index: 999;
+  color: #006eb6;
+  opacity: 0;
+}
+
+/*# sourceMappingURL=index.css.map */
