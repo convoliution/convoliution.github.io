@@ -21,45 +21,45 @@ main {
     justify-content: center;
 
     background: color.$black;
-}
 
-#word {
-    position: fixed;
+    #word {
+        position: fixed;
 
-    @include breakpoint.for-device(mobile)  { font-size: 2rem; }
-    @include breakpoint.for-device(tablet)  { font-size: 4rem; }
-    @include breakpoint.for-device(desktop) { font-size: 5rem; }
+        @include breakpoint.for-device(mobile)  { font-size: 2rem; }
+        @include breakpoint.for-device(tablet)  { font-size: 4rem; }
+        @include breakpoint.for-device(desktop) { font-size: 5rem; }
 
-    > .letter {
-        // width of a space, apparently
-        @include breakpoint.for-device(mobile)  { padding: .33rem; }
-        @include breakpoint.for-device(tablet)  { padding: .605rem; }
-        @include breakpoint.for-device(desktop) { padding: .745rem; }
+        > .letter {
+            // width of a space, apparently
+            @include breakpoint.for-device(mobile)  { padding: .33rem; }
+            @include breakpoint.for-device(tablet)  { padding: .605rem; }
+            @include breakpoint.for-device(desktop) { padding: .745rem; }
+        }
+
+        letter-spacing: 0.1rem;
     }
 
-    letter-spacing: 0.1rem;
-}
+    .convol, .ution {
+        position: relative;
 
-.convol, .ution {
-    position: relative;
+        display: inline-block;
 
-    display: inline-block;
+        color: color.$white;
+    }
 
-    color: color.$white;
-}
+    .convol::before {
+        position: absolute;
 
-.convol::before {
-    position: absolute;
+        color: color.$blue;
 
-    color: color.$blue;
+        content: attr(data-letter);
+        clip-path: var(--before-clip, inset(0 100% 0 0));
+    }
 
-    content: attr(data-letter);
-    clip-path: var(--before-clip, inset(0 100% 0 0));
-}
+    #i {
+        position: absolute;
+        z-index: 999;
 
-#i {
-    position: absolute;
-    z-index: 999;
-
-    color: color.$dark-blue;
+        color: color.$dark-blue;
+    }
 }
