@@ -30,34 +30,35 @@ main {
         @include breakpoint.for-device(desktop) { font-size: 5rem; }
 
         > .letter {
+            position: relative;
+
             // width of a space, apparently
             @include breakpoint.for-device(mobile)  { padding: .33rem; }
             @include breakpoint.for-device(tablet)  { padding: .605rem; }
             @include breakpoint.for-device(desktop) { padding: .745rem; }
+
+            display: inline-block;
         }
 
         letter-spacing: 0.1rem;
     }
 
-    .convol, .ution {
-        position: relative;
-
-        display: inline-block;
-
-        color: color.$white;
-    }
-
     .convol::before {
         position: absolute;
-
-        color: color.$blue;
 
         content: attr(data-letter);
         clip-path: var(--color-mask, inset(0 100% 0 0));
     }
 
+    .convol {
+        color: color.$blue;
+    }
+
+    .convol::before, .ution {
+        color: color.$white;
+    }
+
     #i {
-        position: absolute;
         z-index: 999;
 
         color: color.$dark-blue;
