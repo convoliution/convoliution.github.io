@@ -1,6 +1,12 @@
-function easeInOutCubic(x) {
+function bounded(x) {
     x = Math.max(0, x);
     x = Math.min(x, 1);
+
+    return x;
+}
+
+function easeInOutCubic(x) {
+    x = bounded(x);
 
     if (x < 0.5) {
         return 4 * (x ** 3);
@@ -10,8 +16,7 @@ function easeInOutCubic(x) {
 }
 
 function easeInOutSine(x) {
-    x = Math.max(0, x);
-    x = Math.min(x, 1);
+    x = bounded(x);
 
     return -(Math.cos(Math.PI * x) - 1) / 2;
 }
@@ -48,7 +53,21 @@ function updateIOpacity() {
 }
 
 function updateConvolColors() {
+    const letters = document.getElementsByClassName('letter');
+    const letterI = document.getElementById('i');
 
+    const positionI = letterI.offsetLeft + (letterI.offsetWidth / 2);
+
+    Array.from(letters).forEach(letter => {
+        const box = getComputedStyle(letter);
+        const left = letter.offsetLeft + parseFloat(box.borderLeftWidth) + parseFloat(box.paddingLeft);
+        const right = letter.offsetLeft + letter.offsetWidth - parseFloat(box.borderRightWidth) - parseFloat(box.paddingRight);
+        const progress = (positionI - left) / (right - left);
+
+        const colorChangePercentage = (1 - bounded(progress)) * 100;
+
+        letter.style.setProperty('--before-clip', `inset(0 ${colorChangePercentage}% 0 0)`);
+    });
 }
 
 function updateUtionPosition() {

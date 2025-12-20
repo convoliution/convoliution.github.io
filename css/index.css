@@ -153,8 +153,6 @@ main {
 
 .letter::before {
   position: absolute;
-  top: 0;
-  left: 0;
   color: #66b3ff;
   content: attr(data-letter);
   clip-path: var(--before-clip, inset(0 100% 0 0));
