@@ -1,0 +1,14 @@
+@mixin for-device($device) {
+    @if $device == mobile {
+        @media only screen and (min-width: 0rem) { @content; }
+    }
+    @else if $device == tablet {
+        @media only screen and (min-width: 48rem) { @content; }
+    }
+    @else if $device == desktop {
+        @media only screen and (min-width: 64rem) { @content; }
+    }
+    @else {
+        @warn "Breakpoint mixin only supports: mobile, tablet, desktop.";
+    }
+}
