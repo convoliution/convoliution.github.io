@@ -91,6 +91,7 @@ function updateWord() {
     updateUtionPosition();
 }
 
+document.getElementById('i').style.position = 'absolute';
 window.addEventListener('scroll', updateWord);
 window.addEventListener('resize', updateWord);
 updateWord();

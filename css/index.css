@@ -126,6 +126,9 @@ main #word {
     font-size: 5rem;
   }
 }
+main #word > .letter {
+  position: relative;
+}
 @media only screen and (min-width: 0rem) {
   main #word > .letter {
     padding: 0.33rem;
@@ -141,12 +144,11 @@ main #word {
     padding: 0.745rem;
   }
 }
+main #word > .letter {
+  display: inline-block;
+}
 main #word {
   letter-spacing: 0.1rem;
-}
-main .convol, main .ution {
-  position: relative;
-  display: inline-block;
 }
 main .convol::before {
   position: absolute;
@@ -160,7 +162,6 @@ main .convol::before, main .ution {
   color: #FEFEFE;
 }
 main #i {
-  position: absolute;
   z-index: 999;
   color: #006eb6;
 }
