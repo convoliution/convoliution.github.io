@@ -82,4 +82,5 @@ function updateWord() {
 }
 
 window.addEventListener('scroll', updateWord);
-updateAnimation();
+window.addEventListener('resize', updateWord);
+updateWord();
