@@ -43,17 +43,21 @@ main {
         position: relative;
 
         display: inline-block;
-
-        color: color.$white;
     }
 
     .convol::before {
         position: absolute;
 
-        color: color.$blue;
-
         content: attr(data-letter);
         clip-path: var(--color-mask, inset(0 100% 0 0));
+    }
+
+    .convol {
+        color: color.$blue;
+    }
+
+    .convol::before, .ution {
+        color: color.$white;
     }
 
     #i {

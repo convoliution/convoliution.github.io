@@ -64,9 +64,9 @@ function updateConvolColors() {
         const right = letter.offsetLeft + letter.offsetWidth - parseFloat(box.borderRightWidth) - parseFloat(box.paddingRight);
         const progress = (positionI - left) / (right - left);
 
-        const colorChangePercentage = (1 - bounded(progress)) * 100;
+        const colorChangePercentage = bounded(progress) * 100;
 
-        letter.style.setProperty('--color-mask', `inset(0 ${colorChangePercentage}% 0 0)`);
+        letter.style.setProperty('--color-mask', `inset(0 0 0 ${colorChangePercentage}%)`);
     });
 }
 
