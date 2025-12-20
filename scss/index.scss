@@ -28,7 +28,7 @@ main {
     @include breakpoint.for-device(tablet)  { font-size: 4rem; }
     @include breakpoint.for-device(desktop) { font-size: 5rem; }
 
-    > span {
+    > .letter {
         // width of a space, apparently
         @include breakpoint.for-device(mobile)  { padding: .33rem; }
         @include breakpoint.for-device(tablet)  { padding: .605rem; }
@@ -38,7 +38,7 @@ main {
     letter-spacing: 0.1rem;
 }
 
-.letter {
+.convol, .ution {
     position: relative;
 
     display: inline-block;
@@ -46,7 +46,7 @@ main {
     color: color.$white;
 }
 
-.letter::before {
+.convol::before {
     position: absolute;
 
     color: color.$blue;

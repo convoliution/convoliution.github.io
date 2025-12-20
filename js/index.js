@@ -53,7 +53,7 @@ function updateIOpacity() {
 }
 
 function updateConvolColors() {
-    const letters = document.getElementsByClassName('letter');
+    const letters = document.getElementsByClassName('convol');
     const letterI = document.getElementById('i');
 
     const positionI = letterI.offsetLeft + (letterI.offsetWidth / 2);
