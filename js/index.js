@@ -53,8 +53,8 @@ function updateIOpacity() {
 }
 
 function updateConvolColors() {
-    const letters = document.getElementsByClassName('convol');
     const letterI = document.getElementById('i');
+    const letters = document.getElementsByClassName('convol');
 
     const positionI = letterI.offsetLeft + (letterI.offsetWidth / 2);
 
@@ -71,7 +71,17 @@ function updateConvolColors() {
 }
 
 function updateUtionPosition() {
+    const letterI = document.getElementById('i');
+    const letterL = document.getElementById('l');
+    const letters = document.getElementsByClassName('ution');
 
+    const rightI = letterI.offsetLeft + letterI.offsetWidth;
+    const rightL = letterL.offsetLeft + letterL.offsetWidth;
+    const offset = Math.max(0, rightI - rightL);
+
+    Array.from(letters).forEach(letter => {
+        letter.style.transform = `translateX(${offset}px)`;
+    });
 }
 
 function updateWord() {
