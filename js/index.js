@@ -66,7 +66,7 @@ function updateConvolColors() {
 
         const colorChangePercentage = (1 - bounded(progress)) * 100;
 
-        letter.style.setProperty('--before-clip', `inset(0 ${colorChangePercentage}% 0 0)`);
+        letter.style.setProperty('--color-mask', `inset(0 ${colorChangePercentage}% 0 0)`);
     });
 }
 

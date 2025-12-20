@@ -53,7 +53,7 @@ main {
         color: color.$blue;
 
         content: attr(data-letter);
-        clip-path: var(--before-clip, inset(0 100% 0 0));
+        clip-path: var(--color-mask, inset(0 100% 0 0));
     }
 
     #i {
