@@ -35,7 +35,7 @@ function updateIPosition() {
     const progress = scrolled / maxScroll;
 
     const start = getIStartPosition(word);
-    const end = letterL.offsetLeft + letterL.offsetWidth;
+    const end = letterL.offsetLeft + letterL.offsetWidth + 2;
     const offset = start + (easeInOutCubic(progress) * (end - start));
 
     letterI.style.left = `${offset}px`;
