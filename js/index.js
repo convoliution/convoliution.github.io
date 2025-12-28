@@ -5,16 +5,6 @@ function bounded(x) {
     return x;
 }
 
-function easeInOutCubic(x) {
-    x = bounded(x);
-
-    if (x < 0.5) {
-        return 4 * (x ** 3);
-    } else {
-        return 1 - ((-2 * x + 2) ** 3) / 2
-    }
-}
-
 function easeInOutSine(x) {
     x = bounded(x);
 
@@ -36,7 +26,7 @@ function updateIPosition() {
 
     const start = getIStartPosition(word);
     const end = letterL.offsetLeft + letterL.offsetWidth + 2;
-    const offset = start + (easeInOutCubic(progress) * (end - start));
+    const offset = start + (easeInOutSine(progress) * (end - start));
 
     letterI.style.left = `${offset}px`;
 }
